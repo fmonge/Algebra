@@ -12,42 +12,44 @@ import java.util.ArrayList;
  * @author Curso
  */
 public class Matriz {
-    private ArrayList<ArrayList<Double>> filas;
-    private ArrayList<ArrayList<Double>> columnas;
-
+    private ArrayList<ArrayList<Double>> matriz;
+  
     public Matriz() {
-        filas = new ArrayList<>();
-        columnas = new ArrayList<>();
+        matriz = new ArrayList<ArrayList<Double>>();
+        
     }
 
-    public Matriz(ArrayList<ArrayList<Double>>  filas, ArrayList<ArrayList<Double>>  columnas) {
-        this.filas = filas;
-        this.columnas = columnas;
+    public Matriz(ArrayList<ArrayList<Double>> matriz ) {
+       this.matriz = matriz;
     }
 
-    public ArrayList<ArrayList<Double>>  getFilas() {
-        return filas;
+    public ArrayList<ArrayList<Double>> getMatriz() {
+        return matriz;
+    }
+
+    public void setMatriz(ArrayList<ArrayList<Double>> matriz) {
+        this.matriz = matriz;
     }
     public ArrayList<Double> getFila(int i){
-        return filas.get(i);
+        return matriz.get(i);
     }
-
-    public void setFilas(ArrayList<ArrayList<Double>>  fila) {
-        this.filas = filas;
+    public ArrayList<Double> getcolumna(int j){
+        ArrayList<Double> matriztmp= new ArrayList<Double>();
+        for (int i = 0; i < matriz.size(); i++) {
+            
+            for (int k = 0; k < matriztmp.get(i); k++) {
+                if (k==j){
+                    matriztmp.add(matriz.get(i).get(k));
+                
+                }
+                
+            }
+            
+        }
+        return matriztmp;
     }
-
-    public ArrayList<ArrayList<Double>>  getColumnas() {
-        return columnas;
-    }
-    public ArrayList<Double> getColumna(int j){
-        return filas.get(j);
-    }
-
-    public void setColumnas(ArrayList<ArrayList<Double>>  columna) {
-        this.columnas = columnas;
-    }
-    public void cambioFila(Matriz m){
-        
+    public void cambioFila(Matriz M,int fn,int fm){
+        matriz.set(fn, M.getFila(fm));
     }
     
     
