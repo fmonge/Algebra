@@ -22,6 +22,9 @@ public class Matriz {
     public Matriz(ArrayList<ArrayList<Double>> matriz ) {
        this.matriz = matriz;
     }
+    public Matriz(String M){
+        
+    }
 
     public ArrayList<ArrayList<Double>> getMatriz() {
         return matriz;
@@ -34,22 +37,42 @@ public class Matriz {
         return matriz.get(i);
     }
     public ArrayList<Double> getcolumna(int j){
-        ArrayList<Double> matriztmp= new ArrayList<Double>();
+        ArrayList<Double> columna= new ArrayList<Double>();
         for (int i = 0; i < matriz.size(); i++) {
             
-            for (int k = 0; k < matriztmp.get(i); k++) {
+            for (int k = 0; k < matriz.get(i).size(); k++) {
                 if (k==j){
-                    matriztmp.add(matriz.get(i).get(k));
+                    columna.add(matriz.get(i).get(k));
                 
                 }
                 
             }
             
         }
-        return matriztmp;
+        return columna;
     }
-    public void cambioFila(Matriz M,int fn,int fm){
-        matriz.set(fn, M.getFila(fm));
+    public void cambioFila(int filan,int filam){
+        matriz.set(filan, matriz.get(filam));
+    }
+    public void multiplicacionEscalar(Double escalar){
+        for (int i = 0; i < matriz.size(); i++) {
+            for (int j = 0; j < matriz.get(i).size(); j++) {
+                matriz.get(i).set(j,matriz.get(i).get(j)*escalar ); 
+                matriz.get(i).get(j);
+            }
+            
+        }
+    
+    }
+    public void aplicarTranspuesta(){
+        
+        ArrayList<ArrayList<Double>> matriztmp = new ArrayList<>(); 
+        for (int i = 0; i < matriz.size(); i++) {
+            matriztmp.add(this.getcolumna(i));
+            
+        }
+        matriz = matriztmp;
+    
     }
     
     
