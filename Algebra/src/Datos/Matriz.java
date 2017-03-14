@@ -12,35 +12,43 @@ import java.util.ArrayList;
  * @author Curso
  */
 public class Matriz {
-    private ArrayList<Double> fila;
-    private ArrayList<Double> columna;
+    private ArrayList<ArrayList<Double>> filas;
+    private ArrayList<ArrayList<Double>> columnas;
 
     public Matriz() {
-        fila = new ArrayList<>();
-        columna = new ArrayList<>();
+        filas = new ArrayList<>();
+        columnas = new ArrayList<>();
     }
 
-    public Matriz(ArrayList<Double> fila, ArrayList<Double> columna) {
-        this.fila = fila;
-        this.columna = columna;
+    public Matriz(ArrayList<ArrayList<Double>>  filas, ArrayList<ArrayList<Double>>  columnas) {
+        this.filas = filas;
+        this.columnas = columnas;
     }
 
-    public ArrayList<Double> getFila() {
-        return fila;
+    public ArrayList<ArrayList<Double>>  getFilas() {
+        return filas;
+    }
+    public ArrayList<Double> getFila(int i){
+        return filas.get(i);
     }
 
-    public void setFila(ArrayList<Double> fila) {
-        this.fila = fila;
+    public void setFilas(ArrayList<ArrayList<Double>>  fila) {
+        this.filas = filas;
     }
 
-    public ArrayList<Double> getColumna() {
-        return columna;
+    public ArrayList<ArrayList<Double>>  getColumnas() {
+        return columnas;
+    }
+    public ArrayList<Double> getColumna(int j){
+        return filas.get(j);
     }
 
-    public void setColumna(ArrayList<Double> columna) {
-        this.columna = columna;
+    public void setColumnas(ArrayList<ArrayList<Double>>  columna) {
+        this.columnas = columnas;
     }
-    
+    public void cambioFila(Matriz m){
+        
+    }
     
     
 }
