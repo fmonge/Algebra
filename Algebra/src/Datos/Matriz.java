@@ -51,10 +51,11 @@ public class Matriz {
         }
         return columna;
     }
-    public void cambioFila(int filan,int filam){
-        matriz.set(filan, matriz.get(filam));
+    public void cambioFila(int filaN,int filaM){
+        matriz.set(filaN, matriz.get(filaM));
     }
-    public void multiplicacionEscalar(Double escalar){
+    //multiplica el numero de entrada por cada elemento de la matriz
+    public void multiplicacionEscalar(Double escalar){   
         for (int i = 0; i < matriz.size(); i++) {
             for (int j = 0; j < matriz.get(i).size(); j++) {
                 matriz.get(i).set(j,matriz.get(i).get(j)*escalar ); 
@@ -75,5 +76,51 @@ public class Matriz {
     
     }
     
+
+
+    //En este caso la suma de las filas es sin muplicacion al inicio Ejemplo [F1-->F2]
+    public void sumaFila(int filaN,int filaM){ 
+        ArrayList<Double> filatmp = new ArrayList<>();
+        for (int i = 0; i < matriz.size(); i++) {
+            for (int j = 0; j < matriz.get(i).size(); j++) {
+                
+                
+            }
+            
+        }
+
+    }
+    //En este caso  la  filaN lleva multiplicacion al inicio Ejemplo: 3F1-->F2
+    public void sumaFila(Double escalarN,int filaN ,int filaM){
+
+
+    }
+    //En este casola filaM lleva multiplicacion al inicio [Ejemplo F1-->3F2]
+    public void sumaFila(int filaN,Double escalarM,int filaM){
+
+    }
     
+    //En este caso filaN y filaM llevan multiplicacion al inicio [Ejemplo 4F1-->5F2]
+    public void sumaFila(Double escalarN,int filaN,Double escalarM,int filaM){
+
+    }
+        //En este caso la suma de las filas es sin muplicacion al inicio Ejemplo [F1-->F2]
+    public void restaFila(int filaN,int filaM){ 
+
+
+    }
+    //En este caso  la  filaN lleva multiplicacion al inicio Ejemplo: 3F1-->F2
+    public void restaFila(Double escalarN,int filaN ,int filaM){
+
+
+    }
+    //En este casola filaM lleva multiplicacion al inicio [Ejemplo F1-->3F2]
+    public void restaFila(int filaN,Double escalarM,int filaM){
+
+    }
+    
+    //En este caso filaN y filaM llevan multiplicacion al inicio [Ejemplo 4F1-->5F2]
+    public void restaFila(Double escalarN,int filaN,Double escalarM,int filaM){
+
+    }
 }
