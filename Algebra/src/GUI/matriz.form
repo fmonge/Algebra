@@ -26,72 +26,132 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel16" min="-2" pref="267" max="-2" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jTextField35" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jTextField34" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jLabel3" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jTextField33" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jTextField32" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jLabel2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jTextField30" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jLabel1" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jTextField31" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jTextField41" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jTextField40" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jLabel6" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jTextField39" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jTextField38" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jLabel5" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jTextField37" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jTextField36" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jLabel4" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jTextField46" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jTextField43" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jLabel8" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jTextField42" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jTextField44" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jLabel9" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jTextField45" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jTextField47" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jLabel7" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jTextField52" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jTextField48" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jLabel12" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jTextField53" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jTextField51" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jLabel11" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jTextField49" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jTextField50" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <Component id="jLabel10" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="jButton2" min="-2" pref="80" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txt16_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                          <Component id="txt16_2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                          <Component id="jLabel22" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txt17_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                          <Component id="txt17_2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                          <Component id="jLabel23" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txt18_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                          <Component id="txt18_2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                          <Component id="jLabel24" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txt19_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                          <Component id="txt19_2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                          <Component id="jLabel25" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jTextField54" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                          <Component id="jTextField59" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                          <Component id="jLabel14" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                          <Component id="jTextField55" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                          <Component id="jTextField57" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                          <Component id="jLabel15" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                          <Component id="jTextField58" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                          <Component id="jTextField56" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                          <Component id="jLabel13" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                          <Component id="jButton1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                          <Component id="txt20_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                          <Component id="txt20_2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                          <Component id="jLabel26" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="jLabel16" min="-2" pref="267" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txt21_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt21_2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="jLabel18" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txt22_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt22_2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="jLabel20" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txt23_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt23_2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="jLabel17" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txt24_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt24_2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="jLabel19" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="btn_cancelar" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txt25_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt25_2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="jLabel21" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="btn_aceptar" min="-2" pref="80" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txt11_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt11_2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="jLabel3" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt6_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt6_2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="jLabel2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt1_2" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="jLabel1" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt1_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txt12_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt12_2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="jLabel6" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt7_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt7_2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="jLabel5" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt2_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt2_2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="jLabel4" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txt13_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt13_2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="jLabel8" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt8_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt8_2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="jLabel9" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt3_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt3_2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="jLabel7" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txt14_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt14_2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="jLabel12" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt9_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt9_2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="jLabel11" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt4_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt4_2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="jLabel10" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txt15_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt15_2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="jLabel14" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt10_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt10_2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="jLabel15" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt5_1" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txt5_2" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="jLabel13" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
               </Group>
@@ -107,127 +167,215 @@
               <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jTextField49" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="txt4_1" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel10" min="-2" pref="2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextField50" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="txt4_2" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="jTextField53" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="txt9_1" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel11" min="-2" pref="2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextField51" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="txt9_2" min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="jTextField45" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="txt3_1" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel7" min="-2" pref="2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextField47" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="txt3_2" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="jTextField42" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="txt8_1" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel9" min="-2" pref="2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextField44" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="txt8_2" min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jTextField37" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="txt2_1" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" pref="2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextField36" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="txt2_2" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="jTextField39" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="txt7_1" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel5" min="-2" pref="2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextField38" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="txt7_2" min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jTextField31" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="txt1_1" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" pref="2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextField30" min="-2" pref="20" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="jTextField33" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="txt1_2" min="-2" pref="20" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="txt6_1" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel2" min="-2" pref="2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextField32" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="txt6_2" min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jTextField58" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="txt5_1" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel13" min="-2" pref="2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextField56" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="txt5_2" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="jTextField55" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="txt10_1" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel15" min="-2" pref="2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextField57" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="txt10_2" min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jTextField54" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="txt15_1" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel14" min="-2" pref="2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextField59" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="txt15_2" min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jTextField52" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="txt14_1" min="-2" pref="20" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jLabel12" min="-2" pref="2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField48" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="txt14_2" min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jTextField46" min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="txt13_1" min="-2" pref="20" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel8" min="-2" pref="2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTextField43" min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="txt13_2" min="-2" pref="20" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jTextField41" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="txt12_1" min="-2" pref="20" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLabel6" min="-2" pref="2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jTextField40" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="txt12_2" min="-2" pref="20" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jTextField35" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="txt11_1" min="-2" pref="20" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLabel3" min="-2" pref="2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jTextField34" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="txt11_2" min="-2" pref="20" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="37" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="txt20_1" min="-2" pref="20" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel26" min="-2" pref="2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="txt20_2" min="-2" pref="20" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="txt19_1" min="-2" pref="20" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel25" min="-2" pref="2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="txt19_2" min="-2" pref="20" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="txt18_1" min="-2" pref="20" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel24" min="-2" pref="2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="txt18_2" min="-2" pref="20" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="txt17_1" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jLabel23" min="-2" pref="2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="txt17_2" min="-2" pref="20" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="txt16_1" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jLabel22" min="-2" pref="2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="txt16_2" min="-2" pref="20" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
               </Group>
-              <EmptySpace pref="55" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="txt25_1" min="-2" pref="20" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel21" min="-2" pref="2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="txt25_2" min="-2" pref="20" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="txt24_1" min="-2" pref="20" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel19" min="-2" pref="2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="txt24_2" min="-2" pref="20" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="txt23_1" min="-2" pref="20" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel17" min="-2" pref="2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="txt23_2" min="-2" pref="20" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="txt22_1" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jLabel20" min="-2" pref="2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="txt22_2" min="-2" pref="20" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="txt21_1" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jLabel18" min="-2" pref="2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="txt21_2" min="-2" pref="20" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btn_cancelar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btn_aceptar" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="jTextField30">
+    <Component class="javax.swing.JTextField" name="txt1_2">
       <Properties>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 20]"/>
@@ -245,35 +393,35 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField31">
+    <Component class="javax.swing.JTextField" name="txt1_1">
       <Properties>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[6, 20]"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField31ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt1_1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField32">
+    <Component class="javax.swing.JTextField" name="txt6_2">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="text" type="java.lang.String" value="--------------------"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField33">
+    <Component class="javax.swing.JTextField" name="txt6_1">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
         <Property name="text" type="java.lang.String" value="--------------------"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField34">
+    <Component class="javax.swing.JTextField" name="txt11_2">
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField35">
+    <Component class="javax.swing.JTextField" name="txt11_1">
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField36">
+    <Component class="javax.swing.JTextField" name="txt2_2">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
@@ -290,7 +438,7 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField37">
+    <Component class="javax.swing.JTextField" name="txt2_1">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
@@ -298,10 +446,10 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField37ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt2_1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField38">
+    <Component class="javax.swing.JTextField" name="txt7_2">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
@@ -318,7 +466,7 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField39">
+    <Component class="javax.swing.JTextField" name="txt7_1">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
@@ -335,7 +483,7 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField40">
+    <Component class="javax.swing.JTextField" name="txt12_2">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
@@ -343,10 +491,10 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField40ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt12_2ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField41">
+    <Component class="javax.swing.JTextField" name="txt12_1">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
@@ -363,7 +511,7 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField42">
+    <Component class="javax.swing.JTextField" name="txt8_1">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
@@ -380,7 +528,7 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField43">
+    <Component class="javax.swing.JTextField" name="txt13_2">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
@@ -388,7 +536,7 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField44">
+    <Component class="javax.swing.JTextField" name="txt8_2">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
@@ -396,7 +544,7 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField45">
+    <Component class="javax.swing.JTextField" name="txt3_1">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
@@ -404,7 +552,7 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField46">
+    <Component class="javax.swing.JTextField" name="txt13_1">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
@@ -412,7 +560,7 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField47">
+    <Component class="javax.swing.JTextField" name="txt3_2">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
@@ -429,7 +577,7 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField48">
+    <Component class="javax.swing.JTextField" name="txt14_2">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
@@ -437,7 +585,7 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField49">
+    <Component class="javax.swing.JTextField" name="txt4_1">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
@@ -447,14 +595,14 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel10">
       <Properties>
-        <Property name="text" type="java.lang.String" value="-----------------"/>
+        <Property name="text" type="java.lang.String" value="--------------------"/>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
         </Property>
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField50">
+    <Component class="javax.swing.JTextField" name="txt4_2">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
@@ -462,7 +610,7 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField51">
+    <Component class="javax.swing.JTextField" name="txt9_2">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
@@ -479,7 +627,7 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField52">
+    <Component class="javax.swing.JTextField" name="txt14_1">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
@@ -487,7 +635,7 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField53">
+    <Component class="javax.swing.JTextField" name="txt9_1">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
@@ -504,7 +652,7 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField54">
+    <Component class="javax.swing.JTextField" name="txt15_1">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
@@ -512,7 +660,7 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField55">
+    <Component class="javax.swing.JTextField" name="txt10_1">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
@@ -538,7 +686,7 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField56">
+    <Component class="javax.swing.JTextField" name="txt5_2">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
@@ -555,7 +703,7 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField57">
+    <Component class="javax.swing.JTextField" name="txt10_2">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
@@ -563,7 +711,7 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField58">
+    <Component class="javax.swing.JTextField" name="txt5_1">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
@@ -571,7 +719,7 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField59">
+    <Component class="javax.swing.JTextField" name="txt15_2">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[70, 0]"/>
@@ -584,14 +732,241 @@
         <Property name="text" type="java.lang.String" value="Ingrese unicamente numeros en la matriz"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="btn_aceptar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Aceptar"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="btn_cancelar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cancelar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel17">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="--------------------"/>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[70, 0]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt23_2">
+      <Properties>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[70, 0]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt23_2ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt25_2">
+      <Properties>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[70, 0]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt23_1">
+      <Properties>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[70, 0]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt24_2">
+      <Properties>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[70, 0]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel18">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="--------------------"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt21_2">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt21_1">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt24_1">
+      <Properties>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[70, 0]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel19">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="--------------------"/>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[70, 0]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt25_1">
+      <Properties>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[70, 0]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel20">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="--------------------"/>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[70, 0]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt22_2">
+      <Properties>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[70, 0]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt22_2ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt22_1">
+      <Properties>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[70, 0]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel21">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="--------------------"/>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[70, 0]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt20_2">
+      <Properties>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[70, 0]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel22">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="--------------------"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt16_2">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt16_1">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel23">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="--------------------"/>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[70, 0]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt17_2">
+      <Properties>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[70, 0]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt17_2ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt17_1">
+      <Properties>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[70, 0]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel24">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="--------------------"/>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[70, 0]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt18_2">
+      <Properties>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[70, 0]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt18_1">
+      <Properties>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[70, 0]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt19_2">
+      <Properties>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[70, 0]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt19_1">
+      <Properties>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[70, 0]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel25">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="--------------------"/>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[70, 0]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt20_1">
+      <Properties>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[70, 0]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel26">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="--------------------"/>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[70, 0]"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
     </Component>
   </SubComponents>
