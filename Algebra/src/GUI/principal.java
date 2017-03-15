@@ -102,61 +102,8 @@ public class principal extends javax.swing.JFrame {
 
     private void btn_crearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_crearActionPerformed
         String seleccion = boxfila.getSelectedIndex()+"+"+boxcolumna.getSelectedIndex();
-        switch(seleccion){
-            case "0+0":
-                
-                break;
-            case "0+1":
-                break;
-            case "0+2":
-                break;
-            case "0+3":
-                break;
-            case "0+4":
-                break;
-            case "1+0":
-                break;
-            case "1+1":
-                break;
-            case "1+2":
-                break;
-            case "1+3":
-                break;
-            case "1+4":
-                break;
-            case "2+0":
-                break;
-            case "2+1":
-                break;
-            case "2+2":
-                break;
-            case "2+3":
-                break;
-            case "2+4":
-                break;
-            case "3+0":
-                break;
-            case "3+1":
-                break;
-            case "3+2":
-                break;
-            case "3+3":
-                break;
-            case "3+4":
-                break;
-            case "4+0":
-                break;
-            case "4+1":
-                break;
-            case "4+2":
-                break;
-            case "4+3":
-                break;
-            case "4+4":
-                break;
-            
-                
-        }
+        matriz VentanaMatriz = new matriz(seleccion);
+        VentanaMatriz.setVisible(true);
           
                
     }//GEN-LAST:event_btn_crearActionPerformed

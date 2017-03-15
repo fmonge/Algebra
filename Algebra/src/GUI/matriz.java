@@ -5,6 +5,13 @@
  */
 package GUI;
 
+import java.awt.Component;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Curso
@@ -14,8 +21,15 @@ public class matriz extends javax.swing.JFrame {
     /**
      * Creates new form matriz
      */
-    public matriz() {
+    ArrayList<JLabel> componenteslbl = new ArrayList<>();
+    ArrayList<JTextField> componentestxt1 = new ArrayList<>();
+    
+    
+    public matriz(String seleccion) {
         initComponents();
+        agregarComponentes();
+        crearvista(seleccion);
+        
     }
 
     /**
@@ -28,91 +42,91 @@ public class matriz extends javax.swing.JFrame {
     private void initComponents() {
 
         txt1_2 = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        lbl1 = new javax.swing.JLabel();
         txt1_1 = new javax.swing.JTextField();
         txt6_2 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        lbl6 = new javax.swing.JLabel();
         txt6_1 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        lbl11 = new javax.swing.JLabel();
         txt11_2 = new javax.swing.JTextField();
         txt11_1 = new javax.swing.JTextField();
         txt2_2 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        lbl2 = new javax.swing.JLabel();
         txt2_1 = new javax.swing.JTextField();
         txt7_2 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
+        lbl7 = new javax.swing.JLabel();
         txt7_1 = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
+        lbl12 = new javax.swing.JLabel();
         txt12_2 = new javax.swing.JTextField();
         txt12_1 = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
+        lbl3 = new javax.swing.JLabel();
         txt8_1 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
+        lbl13 = new javax.swing.JLabel();
         txt13_2 = new javax.swing.JTextField();
         txt8_2 = new javax.swing.JTextField();
         txt3_1 = new javax.swing.JTextField();
         txt13_1 = new javax.swing.JTextField();
         txt3_2 = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
+        lbl8 = new javax.swing.JLabel();
         txt14_2 = new javax.swing.JTextField();
         txt4_1 = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
+        lbl4 = new javax.swing.JLabel();
         txt4_2 = new javax.swing.JTextField();
         txt9_2 = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
+        lbl9 = new javax.swing.JLabel();
         txt14_1 = new javax.swing.JTextField();
         txt9_1 = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
+        lbl14 = new javax.swing.JLabel();
         txt15_1 = new javax.swing.JTextField();
         txt10_1 = new javax.swing.JTextField();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        lbl5 = new javax.swing.JLabel();
+        lbl15 = new javax.swing.JLabel();
         txt5_2 = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
+        lbl10 = new javax.swing.JLabel();
         txt10_2 = new javax.swing.JTextField();
         txt5_1 = new javax.swing.JTextField();
         txt15_2 = new javax.swing.JTextField();
-        jLabel16 = new javax.swing.JLabel();
+        lbl_Titulo = new javax.swing.JLabel();
         btn_aceptar = new javax.swing.JButton();
         btn_cancelar = new javax.swing.JButton();
-        jLabel17 = new javax.swing.JLabel();
+        lbl23 = new javax.swing.JLabel();
         txt23_2 = new javax.swing.JTextField();
         txt25_2 = new javax.swing.JTextField();
         txt23_1 = new javax.swing.JTextField();
         txt24_2 = new javax.swing.JTextField();
-        jLabel18 = new javax.swing.JLabel();
+        lbl21 = new javax.swing.JLabel();
         txt21_2 = new javax.swing.JTextField();
         txt21_1 = new javax.swing.JTextField();
         txt24_1 = new javax.swing.JTextField();
-        jLabel19 = new javax.swing.JLabel();
+        lbl24 = new javax.swing.JLabel();
         txt25_1 = new javax.swing.JTextField();
-        jLabel20 = new javax.swing.JLabel();
+        lbl22 = new javax.swing.JLabel();
         txt22_2 = new javax.swing.JTextField();
         txt22_1 = new javax.swing.JTextField();
-        jLabel21 = new javax.swing.JLabel();
+        lbl25 = new javax.swing.JLabel();
         txt20_2 = new javax.swing.JTextField();
-        jLabel22 = new javax.swing.JLabel();
+        lbl16 = new javax.swing.JLabel();
         txt16_2 = new javax.swing.JTextField();
         txt16_1 = new javax.swing.JTextField();
-        jLabel23 = new javax.swing.JLabel();
+        lbl17 = new javax.swing.JLabel();
         txt17_2 = new javax.swing.JTextField();
         txt17_1 = new javax.swing.JTextField();
-        jLabel24 = new javax.swing.JLabel();
+        lbl18 = new javax.swing.JLabel();
         txt18_2 = new javax.swing.JTextField();
         txt18_1 = new javax.swing.JTextField();
         txt19_2 = new javax.swing.JTextField();
         txt19_1 = new javax.swing.JTextField();
-        jLabel25 = new javax.swing.JLabel();
+        lbl19 = new javax.swing.JLabel();
         txt20_1 = new javax.swing.JTextField();
-        jLabel26 = new javax.swing.JLabel();
+        lbl20 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         txt1_2.setPreferredSize(new java.awt.Dimension(70, 20));
 
-        jLabel1.setText("--------------------");
-        jLabel1.setMaximumSize(new java.awt.Dimension(70, 14));
-        jLabel1.setMinimumSize(new java.awt.Dimension(70, 14));
+        lbl1.setText("--------------------");
+        lbl1.setMaximumSize(new java.awt.Dimension(70, 14));
+        lbl1.setMinimumSize(new java.awt.Dimension(70, 14));
 
         txt1_1.setPreferredSize(new java.awt.Dimension(6, 20));
         txt1_1.addActionListener(new java.awt.event.ActionListener() {
@@ -121,16 +135,16 @@ public class matriz extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("--------------------");
+        lbl6.setText("--------------------");
 
-        jLabel3.setText("--------------------");
+        lbl11.setText("--------------------");
 
         txt2_2.setMinimumSize(new java.awt.Dimension(70, 0));
         txt2_2.setName(""); // NOI18N
 
-        jLabel4.setText("--------------------");
-        jLabel4.setMinimumSize(new java.awt.Dimension(70, 0));
-        jLabel4.setName(""); // NOI18N
+        lbl2.setText("--------------------");
+        lbl2.setMinimumSize(new java.awt.Dimension(70, 0));
+        lbl2.setName(""); // NOI18N
 
         txt2_1.setMinimumSize(new java.awt.Dimension(70, 0));
         txt2_1.setName(""); // NOI18N
@@ -143,16 +157,16 @@ public class matriz extends javax.swing.JFrame {
         txt7_2.setMinimumSize(new java.awt.Dimension(70, 0));
         txt7_2.setName(""); // NOI18N
 
-        jLabel5.setText("--------------------");
-        jLabel5.setMinimumSize(new java.awt.Dimension(70, 0));
-        jLabel5.setName(""); // NOI18N
+        lbl7.setText("--------------------");
+        lbl7.setMinimumSize(new java.awt.Dimension(70, 0));
+        lbl7.setName(""); // NOI18N
 
         txt7_1.setMinimumSize(new java.awt.Dimension(70, 0));
         txt7_1.setName(""); // NOI18N
 
-        jLabel6.setText("--------------------");
-        jLabel6.setMinimumSize(new java.awt.Dimension(70, 0));
-        jLabel6.setName(""); // NOI18N
+        lbl12.setText("--------------------");
+        lbl12.setMinimumSize(new java.awt.Dimension(70, 0));
+        lbl12.setName(""); // NOI18N
 
         txt12_2.setMinimumSize(new java.awt.Dimension(70, 0));
         txt12_2.setName(""); // NOI18N
@@ -165,16 +179,16 @@ public class matriz extends javax.swing.JFrame {
         txt12_1.setMinimumSize(new java.awt.Dimension(70, 0));
         txt12_1.setName(""); // NOI18N
 
-        jLabel7.setText("--------------------");
-        jLabel7.setMinimumSize(new java.awt.Dimension(70, 0));
-        jLabel7.setName(""); // NOI18N
+        lbl3.setText("--------------------");
+        lbl3.setMinimumSize(new java.awt.Dimension(70, 0));
+        lbl3.setName(""); // NOI18N
 
         txt8_1.setMinimumSize(new java.awt.Dimension(70, 0));
         txt8_1.setName(""); // NOI18N
 
-        jLabel8.setText("--------------------");
-        jLabel8.setMinimumSize(new java.awt.Dimension(70, 0));
-        jLabel8.setName(""); // NOI18N
+        lbl13.setText("--------------------");
+        lbl13.setMinimumSize(new java.awt.Dimension(70, 0));
+        lbl13.setName(""); // NOI18N
 
         txt13_2.setMinimumSize(new java.awt.Dimension(70, 0));
         txt13_2.setName(""); // NOI18N
@@ -191,9 +205,9 @@ public class matriz extends javax.swing.JFrame {
         txt3_2.setMinimumSize(new java.awt.Dimension(70, 0));
         txt3_2.setName(""); // NOI18N
 
-        jLabel9.setText("--------------------");
-        jLabel9.setMinimumSize(new java.awt.Dimension(70, 0));
-        jLabel9.setName(""); // NOI18N
+        lbl8.setText("--------------------");
+        lbl8.setMinimumSize(new java.awt.Dimension(70, 0));
+        lbl8.setName(""); // NOI18N
 
         txt14_2.setMinimumSize(new java.awt.Dimension(70, 0));
         txt14_2.setName(""); // NOI18N
@@ -201,9 +215,9 @@ public class matriz extends javax.swing.JFrame {
         txt4_1.setMinimumSize(new java.awt.Dimension(70, 0));
         txt4_1.setName(""); // NOI18N
 
-        jLabel10.setText("--------------------");
-        jLabel10.setMinimumSize(new java.awt.Dimension(70, 0));
-        jLabel10.setName(""); // NOI18N
+        lbl4.setText("--------------------");
+        lbl4.setMinimumSize(new java.awt.Dimension(70, 0));
+        lbl4.setName(""); // NOI18N
 
         txt4_2.setMinimumSize(new java.awt.Dimension(70, 0));
         txt4_2.setName(""); // NOI18N
@@ -211,9 +225,9 @@ public class matriz extends javax.swing.JFrame {
         txt9_2.setMinimumSize(new java.awt.Dimension(70, 0));
         txt9_2.setName(""); // NOI18N
 
-        jLabel11.setText("--------------------");
-        jLabel11.setMinimumSize(new java.awt.Dimension(70, 0));
-        jLabel11.setName(""); // NOI18N
+        lbl9.setText("--------------------");
+        lbl9.setMinimumSize(new java.awt.Dimension(70, 0));
+        lbl9.setName(""); // NOI18N
 
         txt14_1.setMinimumSize(new java.awt.Dimension(70, 0));
         txt14_1.setName(""); // NOI18N
@@ -221,9 +235,9 @@ public class matriz extends javax.swing.JFrame {
         txt9_1.setMinimumSize(new java.awt.Dimension(70, 0));
         txt9_1.setName(""); // NOI18N
 
-        jLabel12.setText("--------------------");
-        jLabel12.setMinimumSize(new java.awt.Dimension(70, 0));
-        jLabel12.setName(""); // NOI18N
+        lbl14.setText("--------------------");
+        lbl14.setMinimumSize(new java.awt.Dimension(70, 0));
+        lbl14.setName(""); // NOI18N
 
         txt15_1.setMinimumSize(new java.awt.Dimension(70, 0));
         txt15_1.setName(""); // NOI18N
@@ -231,20 +245,20 @@ public class matriz extends javax.swing.JFrame {
         txt10_1.setMinimumSize(new java.awt.Dimension(70, 0));
         txt10_1.setName(""); // NOI18N
 
-        jLabel13.setText("--------------------");
-        jLabel13.setMinimumSize(new java.awt.Dimension(70, 0));
-        jLabel13.setName(""); // NOI18N
+        lbl5.setText("--------------------");
+        lbl5.setMinimumSize(new java.awt.Dimension(70, 0));
+        lbl5.setName(""); // NOI18N
 
-        jLabel14.setText("--------------------");
-        jLabel14.setMinimumSize(new java.awt.Dimension(70, 0));
-        jLabel14.setName(""); // NOI18N
+        lbl15.setText("--------------------");
+        lbl15.setMinimumSize(new java.awt.Dimension(70, 0));
+        lbl15.setName(""); // NOI18N
 
         txt5_2.setMinimumSize(new java.awt.Dimension(70, 0));
         txt5_2.setName(""); // NOI18N
 
-        jLabel15.setText("--------------------");
-        jLabel15.setMinimumSize(new java.awt.Dimension(70, 0));
-        jLabel15.setName(""); // NOI18N
+        lbl10.setText("--------------------");
+        lbl10.setMinimumSize(new java.awt.Dimension(70, 0));
+        lbl10.setName(""); // NOI18N
 
         txt10_2.setMinimumSize(new java.awt.Dimension(70, 0));
         txt10_2.setName(""); // NOI18N
@@ -255,15 +269,15 @@ public class matriz extends javax.swing.JFrame {
         txt15_2.setMinimumSize(new java.awt.Dimension(70, 0));
         txt15_2.setName(""); // NOI18N
 
-        jLabel16.setText("Ingrese unicamente numeros en la matriz");
+        lbl_Titulo.setText("Ingrese unicamente numeros en la matriz");
 
         btn_aceptar.setText("Aceptar");
 
         btn_cancelar.setText("Cancelar");
 
-        jLabel17.setText("--------------------");
-        jLabel17.setMinimumSize(new java.awt.Dimension(70, 0));
-        jLabel17.setName(""); // NOI18N
+        lbl23.setText("--------------------");
+        lbl23.setMinimumSize(new java.awt.Dimension(70, 0));
+        lbl23.setName(""); // NOI18N
 
         txt23_2.setMinimumSize(new java.awt.Dimension(70, 0));
         txt23_2.setName(""); // NOI18N
@@ -282,21 +296,21 @@ public class matriz extends javax.swing.JFrame {
         txt24_2.setMinimumSize(new java.awt.Dimension(70, 0));
         txt24_2.setName(""); // NOI18N
 
-        jLabel18.setText("--------------------");
+        lbl21.setText("--------------------");
 
         txt24_1.setMinimumSize(new java.awt.Dimension(70, 0));
         txt24_1.setName(""); // NOI18N
 
-        jLabel19.setText("--------------------");
-        jLabel19.setMinimumSize(new java.awt.Dimension(70, 0));
-        jLabel19.setName(""); // NOI18N
+        lbl24.setText("--------------------");
+        lbl24.setMinimumSize(new java.awt.Dimension(70, 0));
+        lbl24.setName(""); // NOI18N
 
         txt25_1.setMinimumSize(new java.awt.Dimension(70, 0));
         txt25_1.setName(""); // NOI18N
 
-        jLabel20.setText("--------------------");
-        jLabel20.setMinimumSize(new java.awt.Dimension(70, 0));
-        jLabel20.setName(""); // NOI18N
+        lbl22.setText("--------------------");
+        lbl22.setMinimumSize(new java.awt.Dimension(70, 0));
+        lbl22.setName(""); // NOI18N
 
         txt22_2.setMinimumSize(new java.awt.Dimension(70, 0));
         txt22_2.setName(""); // NOI18N
@@ -309,18 +323,18 @@ public class matriz extends javax.swing.JFrame {
         txt22_1.setMinimumSize(new java.awt.Dimension(70, 0));
         txt22_1.setName(""); // NOI18N
 
-        jLabel21.setText("--------------------");
-        jLabel21.setMinimumSize(new java.awt.Dimension(70, 0));
-        jLabel21.setName(""); // NOI18N
+        lbl25.setText("--------------------");
+        lbl25.setMinimumSize(new java.awt.Dimension(70, 0));
+        lbl25.setName(""); // NOI18N
 
         txt20_2.setMinimumSize(new java.awt.Dimension(70, 0));
         txt20_2.setName(""); // NOI18N
 
-        jLabel22.setText("--------------------");
+        lbl16.setText("--------------------");
 
-        jLabel23.setText("--------------------");
-        jLabel23.setMinimumSize(new java.awt.Dimension(70, 0));
-        jLabel23.setName(""); // NOI18N
+        lbl17.setText("--------------------");
+        lbl17.setMinimumSize(new java.awt.Dimension(70, 0));
+        lbl17.setName(""); // NOI18N
 
         txt17_2.setMinimumSize(new java.awt.Dimension(70, 0));
         txt17_2.setName(""); // NOI18N
@@ -333,9 +347,9 @@ public class matriz extends javax.swing.JFrame {
         txt17_1.setMinimumSize(new java.awt.Dimension(70, 0));
         txt17_1.setName(""); // NOI18N
 
-        jLabel24.setText("--------------------");
-        jLabel24.setMinimumSize(new java.awt.Dimension(70, 0));
-        jLabel24.setName(""); // NOI18N
+        lbl18.setText("--------------------");
+        lbl18.setMinimumSize(new java.awt.Dimension(70, 0));
+        lbl18.setName(""); // NOI18N
 
         txt18_2.setMinimumSize(new java.awt.Dimension(70, 0));
         txt18_2.setName(""); // NOI18N
@@ -349,16 +363,16 @@ public class matriz extends javax.swing.JFrame {
         txt19_1.setMinimumSize(new java.awt.Dimension(70, 0));
         txt19_1.setName(""); // NOI18N
 
-        jLabel25.setText("--------------------");
-        jLabel25.setMinimumSize(new java.awt.Dimension(70, 0));
-        jLabel25.setName(""); // NOI18N
+        lbl19.setText("--------------------");
+        lbl19.setMinimumSize(new java.awt.Dimension(70, 0));
+        lbl19.setName(""); // NOI18N
 
         txt20_1.setMinimumSize(new java.awt.Dimension(70, 0));
         txt20_1.setName(""); // NOI18N
 
-        jLabel26.setText("--------------------");
-        jLabel26.setMinimumSize(new java.awt.Dimension(70, 0));
-        jLabel26.setName(""); // NOI18N
+        lbl20.setText("--------------------");
+        lbl20.setMinimumSize(new java.awt.Dimension(70, 0));
+        lbl20.setName(""); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -369,293 +383,299 @@ public class matriz extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt16_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt16_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(27, 27, 27)
+                            .addComponent(txt16_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt16_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl16, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(40, 40, 40)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt17_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt17_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(27, 27, 27)
+                            .addComponent(txt17_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt17_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl17, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(40, 40, 40)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt18_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt18_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(26, 26, 26)
+                            .addComponent(txt18_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt18_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl18, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(40, 40, 40)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt19_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt19_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
+                            .addComponent(txt19_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt19_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl19, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(40, 40, 40)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt20_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt20_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt20_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt20_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl20, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(lbl_Titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txt21_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt21_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(27, 27, 27)
+                                .addComponent(txt21_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt21_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl21, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(40, 40, 40)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txt22_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt22_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(27, 27, 27)
+                                .addComponent(txt22_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt22_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl22, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(40, 40, 40)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txt23_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt23_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(26, 26, 26)
+                                .addComponent(txt23_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt23_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl23, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(40, 40, 40)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txt24_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt24_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btn_cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(18, 18, 18)
+                                .addComponent(txt24_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt24_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl24, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btn_cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(40, 40, 40)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txt25_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt25_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btn_aceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(txt25_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt25_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl25, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btn_aceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txt11_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt11_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt6_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt6_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt1_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt1_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(27, 27, 27)
+                                .addComponent(txt11_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt11_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl11, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt6_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt6_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt1_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt1_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(40, 40, 40)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txt12_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt12_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt7_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt7_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt2_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt2_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(27, 27, 27)
+                                .addComponent(txt12_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt12_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl12, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt7_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt7_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt2_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt2_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(40, 40, 40)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txt13_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt13_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt8_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt8_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt3_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt3_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(26, 26, 26)
+                                .addComponent(txt13_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt13_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl13, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt8_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt8_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl8, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt3_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt3_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(40, 40, 40)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txt14_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt14_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt9_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt9_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt4_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt4_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(18, 18, 18)
+                                .addComponent(txt14_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt14_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl14, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt9_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt9_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl9, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt4_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt4_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(40, 40, 40)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txt15_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt15_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt10_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt10_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt5_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txt5_2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(150, Short.MAX_VALUE))
+                                .addComponent(txt15_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt15_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl15, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt10_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt10_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl10, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt5_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt5_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(306, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel16)
+                .addComponent(lbl_Titulo)
                 .addGap(75, 75, 75)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(txt4_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt4_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt4_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt4_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(40, 40, 40)
-                        .addComponent(txt9_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt9_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl9, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt9_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txt9_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(txt3_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt3_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt3_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt3_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(40, 40, 40)
-                        .addComponent(txt8_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt8_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl8, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt8_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txt8_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(txt2_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt2_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt2_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt2_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(40, 40, 40)
-                        .addComponent(txt7_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt7_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl7, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt7_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txt7_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(txt1_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt1_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt1_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt1_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(40, 40, 40)
-                        .addComponent(txt6_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt6_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt6_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txt6_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(txt5_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt5_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt5_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt5_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(40, 40, 40)
-                        .addComponent(txt10_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt10_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl10, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt10_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txt10_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(txt15_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt15_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl15, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt15_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txt15_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(txt14_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt14_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl14, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txt14_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txt14_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(txt13_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt13_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl13, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt13_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txt13_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(txt12_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txt12_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbl12, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(txt12_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txt12_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(txt11_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txt11_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbl11, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(txt11_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(txt11_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(txt20_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt20_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl20, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt20_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txt20_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(txt19_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt19_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl19, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txt19_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txt19_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(txt18_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt18_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl18, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt18_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txt18_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(txt17_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txt17_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbl17, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(txt17_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txt17_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(txt16_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txt16_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbl16, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(txt16_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(txt16_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(txt25_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt25_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl25, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt25_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txt25_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(txt24_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt24_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl24, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txt24_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txt24_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(txt23_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt23_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl23, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt23_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txt23_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(txt22_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txt22_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbl22, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(txt22_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txt22_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(txt21_1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txt21_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbl21, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(txt21_2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(txt21_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addGap(63, 63, 63)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_cancelar)
-                    .addComponent(btn_aceptar))
+                    .addComponent(btn_cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_aceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27))
         );
+
+        lbl1.getAccessibleContext().setAccessibleName("--------------------------");
+        lbl2.getAccessibleContext().setAccessibleName("--------------------------");
+        lbl3.getAccessibleContext().setAccessibleName("--------------------------");
+        lbl4.getAccessibleContext().setAccessibleName("--------------------------");
+        lbl5.getAccessibleContext().setAccessibleName("--------------------------");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -683,7 +703,183 @@ public class matriz extends javax.swing.JFrame {
     private void txt23_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt23_2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt23_2ActionPerformed
-
+    private void crearvista(String seleccion){
+       
+        switch(seleccion){
+            
+            case "0+0":
+                String[] comp = {"lbl1","lbl2","txt1_1","txt1_2"}; 
+                mostrar(comp);
+                
+                break;
+            case "0+1":
+                break;
+            case "0+2":
+                break;
+            case "0+3":
+                break;
+            case "0+4":
+                break;
+            case "1+0":
+                break;
+            case "1+1":
+                break;
+            case "1+2":
+                break;
+            case "1+3":
+                break;
+            case "1+4":
+                break;
+            case "2+0":
+                break;
+            case "2+1":
+                break;
+            case "2+2":
+                break;
+            case "2+3":
+                break;
+            case "2+4":
+                break;
+            case "3+0":
+                break;
+            case "3+1":
+                break;
+            case "3+2":
+                break;
+            case "3+3":
+                break;
+            case "3+4":
+                break;
+            case "4+0":
+                break;
+            case "4+1":
+                break;
+            case "4+2":
+                break;
+            case "4+3":
+                break;
+            case "4+4":
+                break;
+            
+                
+        }
+    }
+    private void mostrar(String[] elementos){
+        System.out.println(elementos[2]);
+        for (int i = 0; i < elementos.length; i++) {
+            
+            for (int j = 0; j <componenteslbl.size(); j++) {
+                
+                if (componenteslbl.get(i).getName()==elementos[i]){
+                    
+                    componenteslbl.get(i).setVisible(true);
+                    componenteslbl.get(i).setEnabled(true6);
+                    
+                }
+                
+            }
+            for (int j = 0; j < 26; j++) {
+               
+                    if (componentestxt1.get(i).getName()== elementos[i]){
+                    componentestxt1.get(i).setVisible(true);
+                    componenteslbl.get(i+25).setVisible(true);
+                    this.repaint();
+                }
+                
+                
+            }
+        }
+        
+        
+    }
+    private void agregarComponentes(){
+        componenteslbl.add(lbl1);
+        componenteslbl.add(lbl2);
+        componenteslbl.add(lbl3);
+        componenteslbl.add(lbl4);
+        componenteslbl.add(lbl5);
+        componenteslbl.add(lbl6);
+        componenteslbl.add(lbl7);
+        componenteslbl.add(lbl8);
+        componenteslbl.add(lbl9);
+        componenteslbl.add(lbl10);
+        componenteslbl.add(lbl11);
+        componenteslbl.add(lbl12);
+        componenteslbl.add(lbl13);
+        componenteslbl.add(lbl14);
+        componenteslbl.add(lbl15);
+        componenteslbl.add(lbl16);
+        componenteslbl.add(lbl17);
+        componenteslbl.add(lbl18);
+        componenteslbl.add(lbl19);
+        componenteslbl.add(lbl20);
+        componenteslbl.add(lbl21);
+        componenteslbl.add(lbl22);
+        componenteslbl.add(lbl23);
+        componenteslbl.add(lbl24);
+        componenteslbl.add(lbl25);
+        
+        componentestxt1.add(txt1_1);
+        componentestxt1.add(txt2_1);
+        componentestxt1.add(txt3_1);
+        componentestxt1.add(txt4_1);
+        componentestxt1.add(txt5_1);
+        componentestxt1.add(txt6_1);
+        componentestxt1.add(txt7_1);
+        componentestxt1.add(txt8_1);
+        componentestxt1.add(txt9_1);
+        componentestxt1.add(txt10_1);
+        componentestxt1.add(txt11_1);
+        componentestxt1.add(txt12_1);
+        componentestxt1.add(txt13_1);
+        componentestxt1.add(txt14_1);
+        componentestxt1.add(txt15_1);
+        componentestxt1.add(txt16_1);
+        componentestxt1.add(txt17_1);
+        componentestxt1.add(txt18_1);
+        componentestxt1.add(txt19_1);
+        componentestxt1.add(txt20_1);
+        componentestxt1.add(txt21_1);
+        componentestxt1.add(txt22_1);
+        componentestxt1.add(txt23_1);
+        componentestxt1.add(txt24_1);
+        componentestxt1.add(txt25_1);
+        
+        componentestxt1.add(txt1_2);
+        componentestxt1.add(txt2_2);
+        componentestxt1.add(txt3_2);
+        componentestxt1.add(txt4_2);
+        componentestxt1.add(txt5_2);
+        componentestxt1.add(txt6_2);
+        componentestxt1.add(txt7_2);
+        componentestxt1.add(txt8_2);
+        componentestxt1.add(txt9_2);
+        componentestxt1.add(txt10_2);
+        componentestxt1.add(txt11_2);
+        componentestxt1.add(txt12_2);
+        componentestxt1.add(txt13_2);
+        componentestxt1.add(txt14_2);
+        componentestxt1.add(txt15_2);
+        componentestxt1.add(txt16_2);
+        componentestxt1.add(txt17_2);
+        componentestxt1.add(txt18_2);
+        componentestxt1.add(txt19_2);
+        componentestxt1.add(txt20_2);
+        componentestxt1.add(txt21_2);
+        componentestxt1.add(txt22_2);
+        componentestxt1.add(txt23_2);
+        componentestxt1.add(txt24_2);
+        componentestxt1.add(txt25_2);
+         for (int i = 0; i < componenteslbl.size(); i++) {
+            componenteslbl.get(i).setVisible(false);
+            
+        }
+         for (int i = 0; i < componentestxt1.size(); i++) {
+            
+            componentestxt1.get(i).setVisible(false);
+        }
+             
+    }
     /**
      * @param args the command line arguments
      */
@@ -714,7 +910,8 @@ public class matriz extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new matriz().setVisible(true);
+                matriz m = new matriz("1+3");
+                m.setVisible(true);
             }
         });
     }
@@ -722,32 +919,32 @@ public class matriz extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_aceptar;
     private javax.swing.JButton btn_cancelar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel lbl1;
+    private javax.swing.JLabel lbl10;
+    private javax.swing.JLabel lbl11;
+    private javax.swing.JLabel lbl12;
+    private javax.swing.JLabel lbl13;
+    private javax.swing.JLabel lbl14;
+    private javax.swing.JLabel lbl15;
+    private javax.swing.JLabel lbl16;
+    private javax.swing.JLabel lbl17;
+    private javax.swing.JLabel lbl18;
+    private javax.swing.JLabel lbl19;
+    private javax.swing.JLabel lbl2;
+    private javax.swing.JLabel lbl20;
+    private javax.swing.JLabel lbl21;
+    private javax.swing.JLabel lbl22;
+    private javax.swing.JLabel lbl23;
+    private javax.swing.JLabel lbl24;
+    private javax.swing.JLabel lbl25;
+    private javax.swing.JLabel lbl3;
+    private javax.swing.JLabel lbl4;
+    private javax.swing.JLabel lbl5;
+    private javax.swing.JLabel lbl6;
+    private javax.swing.JLabel lbl7;
+    private javax.swing.JLabel lbl8;
+    private javax.swing.JLabel lbl9;
+    private javax.swing.JLabel lbl_Titulo;
     private javax.swing.JTextField txt10_1;
     private javax.swing.JTextField txt10_2;
     private javax.swing.JTextField txt11_1;
