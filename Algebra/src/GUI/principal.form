@@ -23,34 +23,36 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="btn_crear" min="-2" pref="90" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                      <Component id="boxfila" min="-2" pref="94" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="boxcolumna" min="-2" pref="94" max="-2" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="boxfila" min="-2" pref="94" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="boxcolumna" min="-2" pref="94" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="300" max="32767" attributes="0"/>
+              <EmptySpace pref="620" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="boxcolumna" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="boxfila" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="boxcolumna" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="239" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+              <Component id="btn_crear" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="294" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -59,11 +61,12 @@
     <Component class="javax.swing.JComboBox" name="boxcolumna">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+          <StringArray count="5">
+            <StringItem index="0" value="1 Columna"/>
+            <StringItem index="1" value="2 Columnas"/>
+            <StringItem index="2" value="3 Columnas"/>
+            <StringItem index="3" value="4 Columnas"/>
+            <StringItem index="4" value="5 Columnas"/>
           </StringArray>
         </Property>
       </Properties>
@@ -82,11 +85,12 @@
     <Component class="javax.swing.JComboBox" name="boxfila">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
+          <StringArray count="5">
             <StringItem index="0" value="1 Fila"/>
-            <StringItem index="1" value="I2 Filas"/>
+            <StringItem index="1" value="2 Filas"/>
             <StringItem index="2" value="3 Filas"/>
             <StringItem index="3" value="4 Filas"/>
+            <StringItem index="4" value="5 Filas"/>
           </StringArray>
         </Property>
       </Properties>
@@ -96,6 +100,11 @@
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn_crear">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Crear"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
