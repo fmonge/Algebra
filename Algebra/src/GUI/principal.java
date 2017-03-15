@@ -5,6 +5,8 @@
  */
 package GUI;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Curso
@@ -51,6 +53,11 @@ public class principal extends javax.swing.JFrame {
         });
 
         btn_crear.setText("Crear");
+        btn_crear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_crearActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -90,8 +97,69 @@ public class principal extends javax.swing.JFrame {
     }//GEN-LAST:event_boxcolumnaActionPerformed
 
     private void boxfilaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxfilaActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_boxfilaActionPerformed
+
+    private void btn_crearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_crearActionPerformed
+        String seleccion = boxfila.getSelectedIndex()+"+"+boxcolumna.getSelectedIndex();
+        switch(seleccion){
+            case "0+0":
+                
+                break;
+            case "0+1":
+                break;
+            case "0+2":
+                break;
+            case "0+3":
+                break;
+            case "0+4":
+                break;
+            case "1+0":
+                break;
+            case "1+1":
+                break;
+            case "1+2":
+                break;
+            case "1+3":
+                break;
+            case "1+4":
+                break;
+            case "2+0":
+                break;
+            case "2+1":
+                break;
+            case "2+2":
+                break;
+            case "2+3":
+                break;
+            case "2+4":
+                break;
+            case "3+0":
+                break;
+            case "3+1":
+                break;
+            case "3+2":
+                break;
+            case "3+3":
+                break;
+            case "3+4":
+                break;
+            case "4+0":
+                break;
+            case "4+1":
+                break;
+            case "4+2":
+                break;
+            case "4+3":
+                break;
+            case "4+4":
+                break;
+            
+                
+        }
+          
+               
+    }//GEN-LAST:event_btn_crearActionPerformed
 
     /**
      * @param args the command line arguments
