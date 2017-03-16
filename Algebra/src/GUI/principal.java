@@ -5,6 +5,7 @@
  */
 package GUI;
 
+import Datos.Matriz;
 import javax.swing.JOptionPane;
 
 /**
@@ -16,8 +17,10 @@ public class principal extends javax.swing.JFrame {
     /**
      * Creates new form principal
      */
+    private Matriz matrizPrincipal;
     public principal() {
         initComponents();
+        matrizPrincipal= new Matriz();
     }
 
     /**
@@ -103,11 +106,17 @@ public class principal extends javax.swing.JFrame {
     private void btn_crearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_crearActionPerformed
         String seleccion = boxfila.getSelectedIndex()+"+"+boxcolumna.getSelectedIndex();
         matriz VentanaMatriz = new matriz(seleccion);
-        VentanaMatriz.setVisible(true);
-          
-               
+        VentanaMatriz.setVisible(true);              
     }//GEN-LAST:event_btn_crearActionPerformed
 
+    public Matriz getMatrizPrincipal() {
+        return matrizPrincipal;
+    }
+
+    public void setMatrizPrincipal(Matriz matrizPrincipal) {
+        this.matrizPrincipal = matrizPrincipal;
+    }
+    
     /**
      * @param args the command line arguments
      */

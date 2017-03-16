@@ -6,6 +6,8 @@
 package GUI;
 
 
+import Datos.Matriz;
+import com.sun.javafx.scene.layout.region.Margins;
 import java.awt.Component;
 import java.awt.Font;
 import java.lang.reflect.Array;
@@ -14,6 +16,8 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import java.lang.reflect.Field;
+import java.math.BigDecimal;
+import org.apfloat.Apfloat;
 /**
  *
  * @author Curso
@@ -23,13 +27,19 @@ public class matriz extends javax.swing.JFrame {
     /**
      * Creates new form matriz
      */
-    ArrayList<JLabel> componenteslbl = new ArrayList<>();
-    ArrayList<JTextField> componentestxt1 = new ArrayList<>();
-    ArrayList<JTextField> componentestxt2 = new ArrayList<>();
+    private Apfloat convertidor1;
+    private Apfloat convertidor2;
+    private Matriz matriztmp = new Matriz();
+    private ArrayList<JLabel> componenteslbl = new ArrayList<>();
+    private ArrayList<JTextField> componentestxt1 = new ArrayList<>();
+    private ArrayList<JTextField> componentestxt2 = new ArrayList<>();
+    private String seleccion ;
     public matriz(String seleccion) {
         initComponents();
         agregarComponentes();
         crearvista(seleccion);
+        this.seleccion = seleccion;
+        
         
     }
 
@@ -338,6 +348,11 @@ public class matriz extends javax.swing.JFrame {
         });
 
         btn_aceptar.setText("Aceptar");
+        btn_aceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_aceptarActionPerformed(evt);
+            }
+        });
 
         btn_cancelar.setText("Cancelar");
         btn_cancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -856,6 +871,125 @@ public class matriz extends javax.swing.JFrame {
     private void txt19_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt19_2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt19_2ActionPerformed
+
+    private void btn_aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_aceptarActionPerformed
+       convertidor1 = new Apfloat("4",20);
+       convertidor2 = new Apfloat("3",20);
+       convertidor1 = convertidor1.divide(convertidor2);
+       Double b = convertidor1.doubleValue();
+        JOptionPane.showMessageDialog(null,  b.toString());
+        switch(seleccion){
+                
+            case "0+0":
+                String [] txt1 = {"0"};
+                mostrar(txt1);
+                
+                break;
+            case "0+1":
+                String [] txt2 = {"0","1"};
+ 
+                mostrar(txt2);
+                break;
+            case "0+2":
+                String [] txt3 = {"0","1","2"};
+
+                mostrar(txt3);
+                break;
+            case "0+3":
+                String [] txt4 = {"0","1","2","3"};
+ 
+                mostrar(txt4);
+                break;
+            case "0+4":
+                String [] txt5 = {"0","1","2","3","4"}; 
+                mostrar(txt5);
+                break;
+            case "1+0":
+                String [] txt6 = {"0","5"};
+                mostrar(txt6);
+                break;
+            case "1+1":
+                String [] txt7 = {"0","1","5","6"}; 
+                mostrar(txt7);
+                break;
+            case "1+2":
+                String [] txt8 = {"0","5","1","2","6","7"}; 
+                mostrar(txt8);
+                break;
+            case "1+3":
+                String [] txt9 = {"0","5","1","2","3","6","7","8"};
+                mostrar(txt9);
+                break;
+            case "1+4":
+                String [] txt10 = {"0","5","1","2","3","4","6","7","8","9"};
+                mostrar(txt10);
+                break;
+            case "2+0":
+                String [] txt11 = {"0","5","10"};
+                mostrar(txt11);
+                break;
+            case "2+1":
+                String [] txt12 = {"0","5","10","1","6","11"}; 
+                mostrar(txt12);
+                break;
+            case "2+2":
+                String [] txt13 = {"0","5","6","10","1","2","7","11","12"};
+                mostrar(txt13);
+                break;
+            case "2+3":
+                String [] txt14 = {"0","5","6","10","1","2","7","11","12","3","8","13"};
+                mostrar(txt14);
+                break;
+            case "2+4":
+                String [] txt15 = {"0","5","6","10","1","2","7","11","12","3","8","13","14","4","9"};
+                mostrar(txt15);
+                break;
+            case "3+0":
+                String [] txt16 = {"0","5","10","20"};
+                mostrar(txt16);
+                break;
+            case "3+1":
+                String [] txt17 = {"0","5","10","15","1","6","11","16"};
+                mostrar(txt17);
+                break;
+            case "3+2":
+                String [] txt18 = {"0","5","10","15","1","6","11","16","2","12","17","7"};
+                mostrar(txt18);
+                break;
+            case "3+3":
+                String [] txt19 = {"0","5","10","15","1","6","11","16","2","12","17","18","13","3","7","8"};
+                mostrar(txt19);
+                break;
+            case "3+4":
+                String [] txt20 = {"0","5","4","10","15","1","6","11","16","2","12","17","18","13","3","7","8","9","14","19"};
+                mostrar(txt20);
+                break;
+            case "4+0":
+                String [] txt21 = {"0","5","10","15","20"};
+                mostrar(txt21);
+                break;
+            case "4+1":
+                String [] txt22 = {"0","5","10","15","20","1","6","11","16","21"};
+                mostrar(txt22);
+                break;
+            case "4+2":
+                String [] txt23 = {"0","5","10","15","20","1","6","11","16","21","2","17","12","22","7"};
+                mostrar(txt23);
+                break;
+            case "4+3":
+                String [] txt24 = {"0","5","10","15","20","1","6","11","16","21","2","17","12","22","7","8","3","13","18","23"};
+                mostrar(txt24);
+                break;
+            case "4+4":
+                String [] txt25 = {"0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"};
+                mostrar(txt25);
+                break;
+            
+                
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_aceptarActionPerformed
+    
     private void crearvista(String seleccion){
         
         switch(seleccion){
