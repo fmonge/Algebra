@@ -5,13 +5,14 @@
  */
 package GUI;
 
+
 import java.awt.Component;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-
+import java.lang.reflect.Field;
 /**
  *
  * @author Curso
@@ -23,8 +24,7 @@ public class matriz extends javax.swing.JFrame {
      */
     ArrayList<JLabel> componenteslbl = new ArrayList<>();
     ArrayList<JTextField> componentestxt1 = new ArrayList<>();
-    
-    
+    ArrayList<JTextField> componentestxt2 = new ArrayList<>();
     public matriz(String seleccion) {
         initComponents();
         agregarComponentes();
@@ -671,11 +671,37 @@ public class matriz extends javax.swing.JFrame {
                 .addGap(27, 27, 27))
         );
 
-        lbl1.getAccessibleContext().setAccessibleName("--------------------------");
-        lbl2.getAccessibleContext().setAccessibleName("--------------------------");
-        lbl3.getAccessibleContext().setAccessibleName("--------------------------");
-        lbl4.getAccessibleContext().setAccessibleName("--------------------------");
-        lbl5.getAccessibleContext().setAccessibleName("--------------------------");
+        txt1_2.getAccessibleContext().setAccessibleName(txt11_2.getUIClassID());
+        lbl1.getAccessibleContext().setAccessibleName("lbl1");
+        txt1_1.getAccessibleContext().setAccessibleName("txt1_1");
+        lbl6.getAccessibleContext().setAccessibleName(lbl1.getUIClassID());
+        lbl11.getAccessibleContext().setAccessibleName("");
+        txt2_2.getAccessibleContext().setAccessibleName("txt2_2");
+        lbl2.getAccessibleContext().setAccessibleName("lbl2");
+        lbl7.getAccessibleContext().setAccessibleName(getName());
+        lbl12.getAccessibleContext().setAccessibleName("");
+        lbl3.getAccessibleContext().setAccessibleName("lbl3");
+        lbl13.getAccessibleContext().setAccessibleName("");
+        txt3_1.getAccessibleContext().setAccessibleName("txt3_1");
+        txt3_2.getAccessibleContext().setAccessibleName("txt3_2");
+        lbl8.getAccessibleContext().setAccessibleName(getName());
+        txt4_1.getAccessibleContext().setAccessibleName("txt4_1");
+        lbl4.getAccessibleContext().setAccessibleName(lbl4.getUIClassID());
+        lbl9.getAccessibleContext().setAccessibleName(getName());
+        lbl14.getAccessibleContext().setAccessibleName("");
+        lbl5.getAccessibleContext().setAccessibleName(lbl5.getUIClassID());
+        lbl15.getAccessibleContext().setAccessibleName("");
+        lbl10.getAccessibleContext().setAccessibleName(getName());
+        lbl23.getAccessibleContext().setAccessibleName("");
+        lbl21.getAccessibleContext().setAccessibleName("");
+        lbl24.getAccessibleContext().setAccessibleName("");
+        lbl22.getAccessibleContext().setAccessibleName("");
+        lbl25.getAccessibleContext().setAccessibleName("");
+        lbl16.getAccessibleContext().setAccessibleName("");
+        lbl17.getAccessibleContext().setAccessibleName("");
+        lbl18.getAccessibleContext().setAccessibleName("");
+        lbl19.getAccessibleContext().setAccessibleName("");
+        lbl20.getAccessibleContext().setAccessibleName("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -704,96 +730,168 @@ public class matriz extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt23_2ActionPerformed
     private void crearvista(String seleccion){
-       
+        
         switch(seleccion){
-            
+                
             case "0+0":
-                String[] comp = {"lbl1","lbl2","txt1_1","txt1_2"}; 
-                mostrar(comp);
+                String [] txt1 = {"0"};
+                String [] lbl1 = {"0"}; 
+                mostrar(lbl1,txt1);
                 
                 break;
             case "0+1":
+                String [] txt2 = {"0","1"};
+                String [] lbl2 = {"0","1"}; 
+                mostrar(lbl2,txt2);
                 break;
             case "0+2":
+                String [] txt3 = {"0","1","2"};
+                String [] lbl3 = {"0","1","2"}; 
+                mostrar(lbl3,txt3);
                 break;
             case "0+3":
+                String [] txt4 = {"0","1","2","3"};
+                String [] lbl4 = {"0","1","2","3"}; 
+                mostrar(lbl4,txt4);
                 break;
             case "0+4":
+                String [] txt5 = {"0","1","2","3","4"};
+                String [] lbl5 = {"0","1","2","3","4"}; 
+                mostrar(lbl5,txt5);
                 break;
             case "1+0":
+                String [] txt6 = {"0","5"};
+                String [] lbl6 = {"0","5"}; 
+                mostrar(lbl6,txt6);
                 break;
             case "1+1":
+                String [] txt7 = {"0","1","5","6"};
+                String [] lbl7 = {"0","1","5","6"}; 
+                mostrar(lbl7,txt7);
                 break;
             case "1+2":
+                String [] txt8 = {"0","5","1","2"};
+                String [] lbl8 = {"0","5","1","2"}; 
+                mostrar(lbl8,txt8);
                 break;
             case "1+3":
+                String [] txt9 = {"0","5","1","2","3"};
+                String [] lbl9 = {"0","5","1","2","3"}; 
+                mostrar(lbl9,txt9);
                 break;
             case "1+4":
+                String [] txt10 = {"0"};
+                String [] lbl10 = {"0"}; 
+                mostrar(lbl10,txt10);
                 break;
             case "2+0":
+                String [] txt11 = {"0"};
+                String [] lbl11 = {"0"}; 
+                mostrar(lbl11,txt11);
                 break;
             case "2+1":
+                String [] txt12 = {"0"};
+                String [] lbl12 = {"0"}; 
+                mostrar(lbl12,txt12);
                 break;
             case "2+2":
+                String [] txt13 = {"0"};
+                String [] lbl13 = {"0"}; 
+                mostrar(lbl13,txt13);
                 break;
             case "2+3":
+                String [] txt14 = {"0"};
+                String [] lbl14 = {"0"}; 
+                mostrar(lbl14,txt14);
                 break;
             case "2+4":
+                String [] txt15 = {"0"};
+                String [] lbl15 = {"0"}; 
+                mostrar(lbl15,txt15);
                 break;
             case "3+0":
+                String [] txt16 = {"0"};
+                String [] lbl16 = {"0"}; 
+                mostrar(lbl16,txt16);
                 break;
             case "3+1":
+                String [] txt17 = {"0"};
+                String [] lbl17 = {"0"}; 
+                mostrar(lbl17,txt17);
                 break;
             case "3+2":
+                String [] txt18 = {"0"};
+                String [] lbl18 = {"0"}; 
+                mostrar(lbl18,txt18);
                 break;
             case "3+3":
+                String [] txt19 = {"0"};
+                String [] lbl19 = {"0"}; 
+                mostrar(lbl19,txt19);
                 break;
             case "3+4":
+                String [] txt20 = {"0"};
+                String [] lbl20= {"0"}; 
+                mostrar(lbl20,txt20);
                 break;
             case "4+0":
+                String [] txt21 = {"0"};
+                String [] lbl21 = {"0"}; 
+                mostrar(lbl21,txt21);
                 break;
             case "4+1":
+                String [] txt22 = {"0"};
+                String [] lbl22 = {"0"}; 
+                mostrar(lbl22,txt22);
                 break;
             case "4+2":
+                String [] txt23 = {"0"};
+                String [] lbl23 = {"0"}; 
+                mostrar(lbl23,txt23);
                 break;
             case "4+3":
+                String [] txt24 = {"0"};
+                String [] lbl24 = {"0"}; 
+                mostrar(lbl24,txt24);
                 break;
             case "4+4":
+                String [] txt25 = {"0"};
+                String [] lbl25 = {"0"}; 
+                mostrar(lbl25,txt25);
                 break;
             
                 
         }
     }
-    private void mostrar(String[] elementos){
-        System.out.println(elementos[2]);
-        for (int i = 0; i < elementos.length; i++) {
-            
-            for (int j = 0; j <componenteslbl.size(); j++) {
+    private void mostrar(String[] lbl,String[] txt){     
+        for (int i = 0; i < lbl.length; i++) {         
+            for (int j = 0; j <componenteslbl.size(); j++) { 
                 
-                if (componenteslbl.get(i).getName()==elementos[i]){
-                    
-                    componenteslbl.get(i).setVisible(true);
-                    componenteslbl.get(i).setEnabled(true6);
-                    
+                if (componenteslbl.get(j).getName().equals(lbl[i])){
+                                    
+                    componenteslbl.get(j).setVisible(true);    
                 }
-                
-            }
-            for (int j = 0; j < 26; j++) {
-               
-                    if (componentestxt1.get(i).getName()== elementos[i]){
-                    componentestxt1.get(i).setVisible(true);
-                    componenteslbl.get(i+25).setVisible(true);
-                    this.repaint();
-                }
-                
                 
             }
         }
+        for (int i = 0; i < txt.length; i++) {
+            for (int j = 0; j < componentestxt1.size(); j++) {             
+                    if (componentestxt1.get(j).getName().equals(txt[i])){
+                    componentestxt1.get(j).setVisible(true);
+                    componentestxt2.get(j).setVisible(true);
+                        
+                }  
+            }
+        }
+        this.revalidate();
+        this.repaint();
         
         
     }
+    
     private void agregarComponentes(){
         componenteslbl.add(lbl1);
+            
         componenteslbl.add(lbl2);
         componenteslbl.add(lbl3);
         componenteslbl.add(lbl4);
@@ -845,38 +943,42 @@ public class matriz extends javax.swing.JFrame {
         componentestxt1.add(txt24_1);
         componentestxt1.add(txt25_1);
         
-        componentestxt1.add(txt1_2);
-        componentestxt1.add(txt2_2);
-        componentestxt1.add(txt3_2);
-        componentestxt1.add(txt4_2);
-        componentestxt1.add(txt5_2);
-        componentestxt1.add(txt6_2);
-        componentestxt1.add(txt7_2);
-        componentestxt1.add(txt8_2);
-        componentestxt1.add(txt9_2);
-        componentestxt1.add(txt10_2);
-        componentestxt1.add(txt11_2);
-        componentestxt1.add(txt12_2);
-        componentestxt1.add(txt13_2);
-        componentestxt1.add(txt14_2);
-        componentestxt1.add(txt15_2);
-        componentestxt1.add(txt16_2);
-        componentestxt1.add(txt17_2);
-        componentestxt1.add(txt18_2);
-        componentestxt1.add(txt19_2);
-        componentestxt1.add(txt20_2);
-        componentestxt1.add(txt21_2);
-        componentestxt1.add(txt22_2);
-        componentestxt1.add(txt23_2);
-        componentestxt1.add(txt24_2);
-        componentestxt1.add(txt25_2);
+        componentestxt2.add(txt1_2);
+        componentestxt2.add(txt2_2);
+        componentestxt2.add(txt3_2);
+        componentestxt2.add(txt4_2);
+        componentestxt2.add(txt5_2);
+        componentestxt2.add(txt6_2);
+        componentestxt2.add(txt7_2);
+        componentestxt2.add(txt8_2);
+        componentestxt2.add(txt9_2);
+        componentestxt2.add(txt10_2);
+        componentestxt2.add(txt11_2);
+        componentestxt2.add(txt12_2);
+        componentestxt2.add(txt13_2);
+        componentestxt2.add(txt14_2);
+        componentestxt2.add(txt15_2);
+        componentestxt2.add(txt16_2);
+        componentestxt2.add(txt17_2);
+        componentestxt2.add(txt18_2);
+        componentestxt2.add(txt19_2);
+        componentestxt2.add(txt20_2);
+        componentestxt2.add(txt21_2);
+        componentestxt2.add(txt22_2);
+        componentestxt2.add(txt23_2);
+        componentestxt2.add(txt24_2);
+        componentestxt2.add(txt25_2);
          for (int i = 0; i < componenteslbl.size(); i++) {
             componenteslbl.get(i).setVisible(false);
+            componenteslbl.get(i).setName(i+"");
             
         }
          for (int i = 0; i < componentestxt1.size(); i++) {
             
             componentestxt1.get(i).setVisible(false);
+            componentestxt1.get(i).setName(i+"");
+           componentestxt2.get(i).setVisible(false);
+            componentestxt2.get(i).setName(i+"");
         }
              
     }
@@ -996,4 +1098,7 @@ public class matriz extends javax.swing.JFrame {
     private javax.swing.JTextField txt9_1;
     private javax.swing.JTextField txt9_2;
     // End of variables declaration//GEN-END:variables
+
+
+
 }
