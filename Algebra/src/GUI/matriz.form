@@ -43,100 +43,99 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="filler5" min="-2" pref="17" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                          <Component id="txt16_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                          <Component id="txt16_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                          <Component id="lbl16" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="txt11_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt11_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="lbl11" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt6_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt6_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="lbl6" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt1_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="lbl1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt1_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="txt21_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="txt21_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="lbl21" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-              <Component id="filler2" min="-2" pref="28" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txt22_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                          <Component id="txt22_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                          <Component id="lbl22" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="filler5" min="-2" pref="17" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                  <Component id="txt16_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                                  <Component id="txt16_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                                  <Component id="lbl16" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="txt11_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt11_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="lbl11" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt6_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt6_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="lbl6" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt1_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="lbl1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt1_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="txt21_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="txt21_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="lbl21" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                      <Component id="txt17_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt17_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="lbl17" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                      <Component id="txt12_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt12_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="lbl12" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt7_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt7_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="lbl7" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt2_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt2_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="lbl2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-              <Component id="filler3" min="-2" pref="28" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txt23_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                          <Component id="txt23_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                          <Component id="lbl23" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                      <Component id="filler2" min="-2" pref="28" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txt22_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                                  <Component id="txt22_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                                  <Component id="lbl22" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                              <Component id="txt17_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt17_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="lbl17" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                              <Component id="txt12_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt12_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="lbl12" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt7_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt7_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="lbl7" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt2_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt2_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="lbl2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                      <Component id="txt18_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt18_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="lbl18" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                      <Component id="txt13_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt13_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="lbl13" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt8_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt8_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="lbl8" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt3_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt3_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="lbl3" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-              <Component id="filler4" min="-2" pref="28" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                      <Component id="txt24_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt24_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="lbl24" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                      <Component id="filler3" min="-2" pref="28" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txt23_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                                  <Component id="txt23_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                                  <Component id="lbl23" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                              <Component id="txt18_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt18_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="lbl18" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                              <Component id="txt13_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt13_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="lbl13" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt8_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt8_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="lbl8" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt3_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt3_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="lbl3" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
+                      <Component id="filler4" min="-2" pref="28" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                              <Component id="txt24_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt24_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="lbl24" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          </Group>
                           <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                               <Component id="txt19_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                               <Component id="txt19_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
@@ -154,45 +153,42 @@
                               <Component id="lbl4" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                      <Component id="filler1" min="-2" pref="38" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                              <Component id="txt25_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt25_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="lbl25" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                              <Component id="txt20_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt20_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="lbl20" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                              <Component id="txt15_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt15_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="lbl15" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt10_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt10_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="lbl10" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt5_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt5_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="lbl5" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                      <Component id="filler6" min="-2" pref="13" max="-2" attributes="0"/>
                   </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="btn_cancelar" min="-2" pref="100" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="510" max="-2" attributes="0"/>
+                      <Component id="btn_aceptar" min="-2" pref="100" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jLabel1" alignment="1" min="-2" pref="655" max="-2" attributes="0"/>
               </Group>
-              <Component id="filler1" min="-2" pref="38" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                      <Component id="txt25_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt25_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="lbl25" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                      <Component id="txt20_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt20_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="lbl20" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                      <Component id="txt15_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt15_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="lbl15" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt10_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt10_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="lbl10" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt5_1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="txt5_2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="lbl5" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-              <Component id="filler6" min="-2" pref="13" max="-2" attributes="0"/>
-          </Group>
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <Component id="btn_cancelar" min="-2" pref="100" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="460" max="-2" attributes="0"/>
-                  <Component id="btn_aceptar" min="-2" pref="100" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-              </Group>
-              <Component id="jLabel1" alignment="1" min="-2" pref="655" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
