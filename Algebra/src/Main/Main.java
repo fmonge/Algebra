@@ -2,7 +2,7 @@
 package Main;
 
 import Datos.Matriz;
-import GUI.principal;
+import GUI.Principal;
 
 /**
  *
@@ -10,10 +10,11 @@ import GUI.principal;
  */
 public class Main {
 
-    static principal VentanaPrincipal;
+    
     public static void main(String[] args) {
-         VentanaPrincipal = new principal();
-         VentanaPrincipal.setVisible(true);
+        Principal p = new Principal();
+        p.setVisible(true);
+        
          
     }
     

@@ -22,23 +22,24 @@ import org.apfloat.Apfloat;
  *
  * @author Curso
  */
-public class matriz extends javax.swing.JFrame {
+public class ventanaMatriz extends javax.swing.JFrame {
 
     /**
      * Creates new form matriz
      */
+    Principal principal ;
     private Apfloat convertidor1;
     private Apfloat convertidor2;
-    private Matriz matriztmp = new Matriz();
     private ArrayList<JLabel> componenteslbl = new ArrayList<>();
     private ArrayList<JTextField> componentestxt1 = new ArrayList<>();
     private ArrayList<JTextField> componentestxt2 = new ArrayList<>();
     private String seleccion ;
-    public matriz(String seleccion) {
+    public ventanaMatriz(String seleccion,Principal p ) {
         initComponents();
         agregarComponentes();
         crearvista(seleccion);
         this.seleccion = seleccion;
+        this.principal = p;
         
         
     }
@@ -166,7 +167,6 @@ public class matriz extends javax.swing.JFrame {
         lbl1.setMaximumSize(new java.awt.Dimension(70, 14));
         lbl1.setMinimumSize(new java.awt.Dimension(70, 14));
 
-        txt1_1.setPreferredSize(new java.awt.Dimension(6, 20));
         txt1_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt1_1ActionPerformed(evt);
@@ -873,120 +873,121 @@ public class matriz extends javax.swing.JFrame {
     }//GEN-LAST:event_txt19_2ActionPerformed
 
     private void btn_aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_aceptarActionPerformed
-       convertidor1 = new Apfloat("4",20);
+       /*convertidor1 = new Apfloat("4",20);
        convertidor2 = new Apfloat("3",20);
        convertidor1 = convertidor1.divide(convertidor2);
-       Double b = convertidor1.doubleValue();
-        JOptionPane.showMessageDialog(null,  b.toString());
+       Double b = convertidor1.doubleValue();*/
+       
         switch(seleccion){
                 
             case "0+0":
-                String [] txt1 = {"0"};
-                mostrar(txt1);
+                String [] txt1 = {"0","-"};
+                agregarMatriz(txt1);
                 
                 break;
             case "0+1":
-                String [] txt2 = {"0","1"};
- 
-                mostrar(txt2);
+                String [] txt2 = {"0","1","-"};
+                agregarMatriz(txt2);
+                
                 break;
             case "0+2":
                 String [] txt3 = {"0","1","2"};
 
-                mostrar(txt3);
+                
                 break;
             case "0+3":
                 String [] txt4 = {"0","1","2","3"};
  
-                mostrar(txt4);
+                
                 break;
             case "0+4":
                 String [] txt5 = {"0","1","2","3","4"}; 
-                mostrar(txt5);
+                
                 break;
             case "1+0":
                 String [] txt6 = {"0","5"};
-                mostrar(txt6);
+                
                 break;
             case "1+1":
-                String [] txt7 = {"0","1","5","6"}; 
-                mostrar(txt7);
+                String [] txt7 = {"0","1","-","5","6","-"}; 
+                agregarMatriz(txt7);
                 break;
             case "1+2":
                 String [] txt8 = {"0","5","1","2","6","7"}; 
-                mostrar(txt8);
+                
                 break;
             case "1+3":
                 String [] txt9 = {"0","5","1","2","3","6","7","8"};
-                mostrar(txt9);
+                
                 break;
             case "1+4":
                 String [] txt10 = {"0","5","1","2","3","4","6","7","8","9"};
-                mostrar(txt10);
+                
                 break;
             case "2+0":
                 String [] txt11 = {"0","5","10"};
-                mostrar(txt11);
+                
                 break;
             case "2+1":
                 String [] txt12 = {"0","5","10","1","6","11"}; 
-                mostrar(txt12);
+                
                 break;
             case "2+2":
                 String [] txt13 = {"0","5","6","10","1","2","7","11","12"};
-                mostrar(txt13);
+               
                 break;
             case "2+3":
                 String [] txt14 = {"0","5","6","10","1","2","7","11","12","3","8","13"};
-                mostrar(txt14);
+                
                 break;
             case "2+4":
                 String [] txt15 = {"0","5","6","10","1","2","7","11","12","3","8","13","14","4","9"};
-                mostrar(txt15);
+               
                 break;
             case "3+0":
                 String [] txt16 = {"0","5","10","20"};
-                mostrar(txt16);
+                
                 break;
             case "3+1":
                 String [] txt17 = {"0","5","10","15","1","6","11","16"};
-                mostrar(txt17);
+                
                 break;
             case "3+2":
                 String [] txt18 = {"0","5","10","15","1","6","11","16","2","12","17","7"};
-                mostrar(txt18);
+                
                 break;
             case "3+3":
                 String [] txt19 = {"0","5","10","15","1","6","11","16","2","12","17","18","13","3","7","8"};
-                mostrar(txt19);
+                
                 break;
             case "3+4":
                 String [] txt20 = {"0","5","4","10","15","1","6","11","16","2","12","17","18","13","3","7","8","9","14","19"};
-                mostrar(txt20);
+                
                 break;
             case "4+0":
                 String [] txt21 = {"0","5","10","15","20"};
-                mostrar(txt21);
+                
                 break;
             case "4+1":
                 String [] txt22 = {"0","5","10","15","20","1","6","11","16","21"};
-                mostrar(txt22);
+                
                 break;
             case "4+2":
                 String [] txt23 = {"0","5","10","15","20","1","6","11","16","21","2","17","12","22","7"};
-                mostrar(txt23);
+               
                 break;
             case "4+3":
                 String [] txt24 = {"0","5","10","15","20","1","6","11","16","21","2","17","12","22","7","8","3","13","18","23"};
-                mostrar(txt24);
+                
                 break;
             case "4+4":
                 String [] txt25 = {"0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"};
-                mostrar(txt25);
+               
                 break;
             
                 
         }
+        JOptionPane.showMessageDialog(null, "Se agrego");
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_aceptarActionPerformed
     
@@ -1127,6 +1128,33 @@ public class matriz extends javax.swing.JFrame {
         
         
     }
+    private void agregarMatriz(String[] txt){
+        //chekea que la matriz contenga solo numeros y que no sean  ceros 
+        for (int i = 0; i < txt.length; i++) {
+            String string = txt[i];
+            
+        }
+        /////////////////////////////////////////////////////////////////
+        ArrayList<Double> arraytmp = new ArrayList<Double>();
+        for (int i = 0; i < txt.length; i++) {
+            if (txt[i].equals("-")){  
+                principal.getMatrizPrincipal().añadirFila(new ArrayList<>(arraytmp));            
+                arraytmp.clear();
+            }
+            else{
+                    double num1 = 0;
+                    double num2 = 0;
+                    double result = 0;
+                    num1 = Double.parseDouble(componentestxt1.get(Integer.parseInt(txt[i])).getText());                      
+                    num2 = Double.parseDouble(componentestxt2.get(Integer.parseInt(txt[i])).getText());
+                    result = num1/num2;
+                    arraytmp.add(result);                            
+            }
+            
+            
+        }
+        
+    }
     
     private void agregarComponentes(){
         componenteslbl.add(lbl1);
@@ -1230,38 +1258,7 @@ public class matriz extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(matriz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(matriz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(matriz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(matriz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                matriz m = new matriz("1+3");
-                m.setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_aceptar;

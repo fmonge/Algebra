@@ -11,24 +11,16 @@ public class Matriz {
     private ArrayList<ArrayList<Double>> matriz;
   
     public Matriz() {
-        matriz = new ArrayList<ArrayList<Double>>();
-        
+        matriz = new ArrayList<ArrayList<Double>>();        
     }
-
-    public Matriz(ArrayList<ArrayList<Double>> matriz ) {
-       this.matriz = matriz;
+    public void añadirFila(ArrayList<Double> array){
+        this.matriz.add(array);   
     }
-    public Matriz(String M){
-        
-    }
-
     public ArrayList<ArrayList<Double>> getMatriz() {
         return matriz;
     }
 
-    public void setMatriz(ArrayList<ArrayList<Double>> matriz) {
-        this.matriz = matriz;
-    }
+
     public ArrayList<Double> getFila(int i){
         return matriz.get(i);
     }
@@ -151,5 +143,12 @@ public class Matriz {
             matriz.get(filaN).set(i, filatmp2.get(i)-filatmp1.get(i));
             
         }
+    }
+    public void imprimirMatriz(){
+        for (int i = 0; i < matriz.size(); i++) {
+            System.out.println(matriz.get(i).toString());
+            
+        }
+    
     }
 }
