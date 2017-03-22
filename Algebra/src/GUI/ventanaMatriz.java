@@ -987,10 +987,31 @@ public class ventanaMatriz extends javax.swing.JFrame {
             
                 
         }
-        JOptionPane.showMessageDialog(null, "Se agrego");
-        // TODO add your handling code here:
+        
+        
     }//GEN-LAST:event_btn_aceptarActionPerformed
-    
+    private boolean matrizCorrecta(String[] txt){
+        for (int i = 0; i < txt.length; i++) {
+            if (txt[i].equals("-")){  
+                
+            }
+            else{
+                 if (componentestxt1.get(Integer.parseInt(txt[i])).getText().matches("[0-9]+")&&
+                         componentestxt2.get(Integer.parseInt(txt[i])).getText().matches("[0-9]+")
+                         
+                         ){
+                 
+                 }
+                 else{
+                     return false;
+                 }
+                                            
+            }
+            
+            
+        }
+        return true;
+    }
     private void crearvista(String seleccion){
         
         switch(seleccion){
@@ -1129,30 +1150,32 @@ public class ventanaMatriz extends javax.swing.JFrame {
         
     }
     private void agregarMatriz(String[] txt){
-        //chekea que la matriz contenga solo numeros y que no sean  ceros 
-        for (int i = 0; i < txt.length; i++) {
-            String string = txt[i];
+        if (matrizCorrecta(txt)){
+            ArrayList<Double> arraytmp = new ArrayList<Double>();
+            for (int i = 0; i < txt.length; i++) {
+                if (txt[i].equals("-")){  
+                    principal.getMatrizPrincipal().añadirFila(new ArrayList<>(arraytmp));            
+                    arraytmp.clear();
+                }
+                else{
+                        double num1 = 0;
+                        double num2 = 0;
+                        double result = 0;
+                        num1 = Double.parseDouble(componentestxt1.get(Integer.parseInt(txt[i])).getText());                      
+                        num2 = Double.parseDouble(componentestxt2.get(Integer.parseInt(txt[i])).getText());
+                        result = num1/num2;
+                        arraytmp.add(result);                            
+                }
             
-        }
-        /////////////////////////////////////////////////////////////////
-        ArrayList<Double> arraytmp = new ArrayList<Double>();
-        for (int i = 0; i < txt.length; i++) {
-            if (txt[i].equals("-")){  
-                principal.getMatrizPrincipal().añadirFila(new ArrayList<>(arraytmp));            
-                arraytmp.clear();
+            
             }
-            else{
-                    double num1 = 0;
-                    double num2 = 0;
-                    double result = 0;
-                    num1 = Double.parseDouble(componentestxt1.get(Integer.parseInt(txt[i])).getText());                      
-                    num2 = Double.parseDouble(componentestxt2.get(Integer.parseInt(txt[i])).getText());
-                    result = num1/num2;
-                    arraytmp.add(result);                            
-            }
-            
-            
         }
+        else{
+            JOptionPane.showMessageDialog(null,
+                    "La matriz que se ingreso se ecuentra incorrecta ,recuerde que no puede poseeer ceros,ni letras , ni encontrarse vacia");
+        
+        }
+        
         
     }
     
