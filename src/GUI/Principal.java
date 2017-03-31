@@ -5,7 +5,11 @@
  */
 package GUI;
 
+import Datos.ListaMatriz;
 import Datos.Matriz;
+import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,10 +22,16 @@ public class Principal extends javax.swing.JFrame {
      * Creates new form principal
      */
     
-    private Matriz matrizPrincipal;
+    private ArrayList<JComboBox<String>> combos=new ArrayList<>();
+    private ArrayList<ListaMatriz> matricesIngresadas;
+    private int filaseleccionadas = 0;
+    private int columnaSeleccionadas=0;
+    private ListaMatriz matrizSeleccionada = new ListaMatriz();
     public Principal() {
         initComponents();
-        matrizPrincipal = new Matriz();
+        
+        matricesIngresadas = new ArrayList<>();
+        combos();
         
     }
    
@@ -38,9 +48,42 @@ public class Principal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         boxfila = new javax.swing.JComboBox<>();
         btn_crear = new javax.swing.JButton();
-        btn_Imprimir = new javax.swing.JButton();
+        ventanaTab = new javax.swing.JTabbedPane();
+        tab_pasos = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        areatexto = new javax.swing.JTextArea();
+        MATRICES = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        pasoscb = new javax.swing.JComboBox<>();
+        btn_imprimir = new javax.swing.JButton();
+        tab_op = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        sumacb = new javax.swing.JComboBox<>();
+        jLabel6 = new javax.swing.JLabel();
+        suma_aplicar = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        txt_suma2 = new javax.swing.JTextField();
+        txt_suma1 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        suma2cb = new javax.swing.JComboBox<>();
+        suma1cb = new javax.swing.JComboBox<>();
+        resta_aplicar = new javax.swing.JButton();
+        txt_resta2 = new javax.swing.JTextField();
+        txt_resta1 = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        resta2cb = new javax.swing.JComboBox<>();
+        resta1cb = new javax.swing.JComboBox<>();
+        jLabel14 = new javax.swing.JLabel();
+        restacb = new javax.swing.JComboBox<>();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        matrizNombre = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         boxcolumna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 Columna", "2 Columnas", "3 Columnas", "4 Columnas", "5 Columnas" }));
         boxcolumna.addActionListener(new java.awt.event.ActionListener() {
@@ -49,7 +92,8 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Seleccione el tamaño de la matriz que desea ingresar ");
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setText("Seleccione el tamaño de la matriz que desea ingresar a la lista de matrices del programa");
 
         boxfila.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 Fila", "2 Filas", "3 Filas", "4 Filas", "5 Filas" }));
         boxfila.addActionListener(new java.awt.event.ActionListener() {
@@ -65,12 +109,236 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        btn_Imprimir.setText("Impirmir");
-        btn_Imprimir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_ImprimirActionPerformed(evt);
+        areatexto.setColumns(20);
+        areatexto.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
+        areatexto.setRows(5);
+        jScrollPane1.setViewportView(areatexto);
+
+        MATRICES.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MATRICESMouseClicked(evt);
             }
         });
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setText("Seleccione la matriz para la cual desea realizar las operaciones realizadas");
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel3.setText("ImprimirPaso:");
+
+        pasoscb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Principal" }));
+
+        btn_imprimir.setText("Imprimir");
+        btn_imprimir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_imprimirActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout tab_pasosLayout = new javax.swing.GroupLayout(tab_pasos);
+        tab_pasos.setLayout(tab_pasosLayout);
+        tab_pasosLayout.setHorizontalGroup(
+            tab_pasosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1)
+            .addGroup(tab_pasosLayout.createSequentialGroup()
+                .addGroup(tab_pasosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addGroup(tab_pasosLayout.createSequentialGroup()
+                        .addComponent(MATRICES, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(90, 90, 90)
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(pasoscb, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btn_imprimir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        tab_pasosLayout.setVerticalGroup(
+            tab_pasosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab_pasosLayout.createSequentialGroup()
+                .addGap(4, 4, 4)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
+                .addGroup(tab_pasosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(MATRICES, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3)
+                    .addComponent(pasoscb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_imprimir))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        ventanaTab.addTab("Pasos", tab_pasos);
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel5.setText("Suma de Filas");
+
+        sumacb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fn-->Fm", "xFn-->Fm", "Fn-->xFm", "xFn-->xFm" }));
+
+        jLabel6.setText("-------------------------------------------------------------------------------------");
+
+        suma_aplicar.setText("Aplicar");
+        suma_aplicar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                suma_aplicarActionPerformed(evt);
+            }
+        });
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel9.setText("Las operaciones seran realizadas en la matriz seleccionada");
+
+        txt_suma2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_suma2ActionPerformed(evt);
+            }
+        });
+
+        txt_suma1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_suma1ActionPerformed(evt);
+            }
+        });
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel10.setText("FilaN");
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel11.setText("FilaM");
+
+        resta_aplicar.setText("Aplicar");
+        resta_aplicar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resta_aplicarActionPerformed(evt);
+            }
+        });
+
+        txt_resta2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_resta2ActionPerformed(evt);
+            }
+        });
+
+        txt_resta1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_resta1ActionPerformed(evt);
+            }
+        });
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel12.setText("FilaN");
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel13.setText("FilaM");
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel14.setText("Resta de Filas");
+
+        restacb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fn-->Fm", "xFn-->Fm", "Fn-->xFm", "xFn-->xFm" }));
+
+        jLabel15.setText("-------------------------------------------------------------------------------------");
+
+        javax.swing.GroupLayout tab_opLayout = new javax.swing.GroupLayout(tab_op);
+        tab_op.setLayout(tab_opLayout);
+        tab_opLayout.setHorizontalGroup(
+            tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tab_opLayout.createSequentialGroup()
+                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9)
+                    .addGroup(tab_opLayout.createSequentialGroup()
+                        .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(tab_opLayout.createSequentialGroup()
+                                .addComponent(txt_suma1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(suma1cb, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_suma2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(tab_opLayout.createSequentialGroup()
+                                .addGap(70, 70, 70)
+                                .addComponent(jLabel10)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel11)
+                            .addComponent(suma2cb, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, tab_opLayout.createSequentialGroup()
+                            .addComponent(jLabel5)
+                            .addGap(18, 18, 18)
+                            .addComponent(sumacb, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(suma_aplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addGroup(tab_opLayout.createSequentialGroup()
+                        .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(tab_opLayout.createSequentialGroup()
+                                .addComponent(jLabel12)
+                                .addGap(67, 67, 67))
+                            .addGroup(tab_opLayout.createSequentialGroup()
+                                .addComponent(txt_resta1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(resta1cb, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_resta2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel13)
+                            .addComponent(resta2cb, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, tab_opLayout.createSequentialGroup()
+                            .addComponent(jLabel14)
+                            .addGap(18, 18, 18)
+                            .addComponent(restacb, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(resta_aplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.LEADING)))
+                .addGap(0, 523, Short.MAX_VALUE))
+        );
+        tab_opLayout.setVerticalGroup(
+            tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tab_opLayout.createSequentialGroup()
+                .addComponent(jLabel9)
+                .addGap(20, 20, 20)
+                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(sumacb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(suma_aplicar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel11))
+                .addGap(4, 4, 4)
+                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_suma2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_suma1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(suma2cb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(suma1cb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel6)
+                .addGap(18, 18, 18)
+                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(restacb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(resta_aplicar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(jLabel13))
+                .addGap(4, 4, 4)
+                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_resta2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_resta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(resta2cb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(resta1cb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel15)
+                .addContainerGap(196, Short.MAX_VALUE))
+        );
+
+        ventanaTab.addTab("Operaciones ", tab_op);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel4.setText("Matriz Seleccionada :");
+
+        matrizNombre.setText("??");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -78,17 +346,19 @@ public class Principal extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btn_Imprimir)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn_crear, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel1)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(boxfila, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(boxcolumna, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(620, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(boxfila, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_crear, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(boxcolumna, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(matrizNombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ventanaTab))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -96,17 +366,25 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(57, 57, 57)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(boxfila, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(boxcolumna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_crear)
-                    .addComponent(btn_Imprimir))
-                .addContainerGap(294, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(boxfila, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)
+                        .addComponent(boxcolumna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btn_crear)
+                        .addGap(78, 78, 78)
+                        .addComponent(jLabel4)
+                        .addGap(18, 18, 18)
+                        .addComponent(matrizNombre)
+                        .addContainerGap())
+                    .addComponent(ventanaTab)))
         );
 
+        ventanaTab.getAccessibleContext().setAccessibleName("Pasos");
+
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void boxcolumnaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxcolumnaActionPerformed
@@ -119,65 +397,200 @@ public class Principal extends javax.swing.JFrame {
 
     private void btn_crearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_crearActionPerformed
         String seleccion = boxfila.getSelectedIndex()+"+"+boxcolumna.getSelectedIndex();
-        ventanaMatriz VentanaMatriz = new ventanaMatriz(seleccion,this);
-        VentanaMatriz.setVisible(true);              
+        String nombre  =   JOptionPane.showInputDialog(null,"Ingrese el nombre de la matriz");
+        ventanaMatriz VentanaMatriz = new ventanaMatriz(seleccion,this,nombre.toUpperCase());
+        VentanaMatriz.setVisible(true);
+        
     }//GEN-LAST:event_btn_crearActionPerformed
 
-    private void btn_ImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ImprimirActionPerformed
+    private void btn_imprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_imprimirActionPerformed
+        try {
+            //System.out.println(pasoscb.getSelectedIndex());
+            areatexto.setText("");
+            System.out.println(matrizSeleccionada.size());
+            areatexto.setText(matrizSeleccionada(pasoscb.getSelectedIndex()));
+            matrizSeleccionada.imprimir();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        
+        
+        
+// TODO add your handling code here:
+    }//GEN-LAST:event_btn_imprimirActionPerformed
 
-        matrizPrincipal.imprimirMatriz();
+    private void MATRICESMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MATRICESMouseClicked
+        
+        actualizar();
+        
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_ImprimirActionPerformed
+    }//GEN-LAST:event_MATRICESMouseClicked
 
-    public Matriz getMatrizPrincipal() {
-        return matrizPrincipal;
+    private void txt_suma2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_suma2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_suma2ActionPerformed
+
+    private void txt_suma1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_suma1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_suma1ActionPerformed
+
+    private void txt_resta2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_resta2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_resta2ActionPerformed
+
+    private void txt_resta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_resta1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_resta1ActionPerformed
+
+    private void suma_aplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_suma_aplicarActionPerformed
+        
+        switch(sumacb.getSelectedItem().toString()){
+            case "Fn-->Fm":
+                matrizSeleccionada.duplicar();
+                matrizSeleccionada.getUltimo().sumaFila( suma1cb.getSelectedIndex(),suma2cb.getSelectedIndex() );
+                
+                break;
+            case "xFn-->Fm":
+                matrizSeleccionada.duplicar();
+                matrizSeleccionada.getUltimo().sumaFila(Integer.parseInt(txt_suma1.getText()), suma1cb.getSelectedIndex(), "null",suma2cb.getSelectedIndex());
+                break;
+            case "Fn-->xFm":
+                matrizSeleccionada.duplicar();
+                matrizSeleccionada.getUltimo().sumaFila("null", suma1cb.getSelectedIndex(),Integer.parseInt(txt_suma2.getText()),suma2cb.getSelectedIndex());
+                break;
+            case "xFn-->xFm":
+                matrizSeleccionada.duplicar();
+                matrizSeleccionada.getUltimo().sumaFila(Integer.parseInt(txt_suma1.getText()),suma1cb.getSelectedIndex(),Integer.parseInt(txt_suma2.getText()), suma2cb.getSelectedIndex());
+                break;
+        }
+        JOptionPane.showMessageDialog(null, "Operacion realizada");
+        actualizar();
+        
+        // TODO add your handling code here:
+    }//GEN-LAST:event_suma_aplicarActionPerformed
+
+    private void resta_aplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resta_aplicarActionPerformed
+        switch(sumacb.getSelectedItem().toString()){
+            case "Fn-->Fm":
+                matrizSeleccionada.duplicar();
+                matrizSeleccionada.getUltimo().restaFila(resta1cb.getSelectedIndex(),restacb.getSelectedIndex() );
+                
+                break;
+            case "xFn-->Fm":
+                matrizSeleccionada.duplicar();
+                matrizSeleccionada.getUltimo().restaFila(Integer.parseInt(txt_resta1.getText()), resta1cb.getSelectedIndex(), "null",resta2cb.getSelectedIndex());
+                break;
+            case "Fn-->xFm":
+                matrizSeleccionada.duplicar();
+                matrizSeleccionada.getUltimo().restaFila("null", resta1cb.getSelectedIndex(),Integer.parseInt(txt_resta2.getText()),resta2cb.getSelectedIndex());
+                break;
+            case "xFn-->xFm":
+                matrizSeleccionada.duplicar();
+                matrizSeleccionada.getUltimo().restaFila(Integer.parseInt(txt_resta1.getText()),resta1cb.getSelectedIndex(),Integer.parseInt(txt_resta2.getText()), resta2cb.getSelectedIndex());
+                break;
+        }
+        JOptionPane.showMessageDialog(null, "Operacion realizada");
+        actualizar();
+        
+// TODO add your handling code here:
+    }//GEN-LAST:event_resta_aplicarActionPerformed
+    public void actualizar(){
+        try {
+               
+                matrizNombre.setText(MATRICES.getSelectedItem().toString());               
+                DefaultComboBoxModel model = (DefaultComboBoxModel) pasoscb.getModel();
+                model.removeAllElements();
+                pasoscb.addItem("Principal");
+            for (int i = 1; i < matrizSeleccionada.size(); i++) {           
+                pasoscb.addItem(i+"");
+
+            }
+            for (int i = 0; i < matricesIngresadas.size(); i++) {
+                if (matricesIngresadas.get(i).getNombre()== MATRICES.getSelectedItem().toString()){
+                    matrizSeleccionada = matricesIngresadas.get(i);
+                    filaseleccionadas =matricesIngresadas.get(i).getMatrices().get(0).filasSize();
+                    columnaSeleccionadas = matricesIngresadas.get(i).getMatrices().get(0).columnasSize();
+                }
+                
+            }
+            setcombos();
+            
+            
+        } catch (Exception e) {
+        }
+    }
+    public void agregarCombo(String item){
+        MATRICES.addItem(item);
+    }
+    public ArrayList<ListaMatriz> getMatricesIngresadas() {
+        return matricesIngresadas;
     }
 
-    public void setMatrizPrincipal(Matriz matrizPrincipal) {
-        this.matrizPrincipal = matrizPrincipal;
+    public void setMatricesIngresadas(ArrayList<ListaMatriz> matricesIngresadas) {
+        this.matricesIngresadas = matricesIngresadas;
+    }
+    public void agregarAMatricesIngresadas(ListaMatriz lm){
+        matricesIngresadas.add(lm);
     }
     
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
+    public String matrizSeleccionada(int a){
+        return matrizSeleccionada.getMatrices().get(pasoscb.getSelectedIndex()).imprimirMatriz();
+    }
+    public void setcombos(){
+        for (int i = 0; i < combos.size(); i++) {
+            for (int j = 0; j < filaseleccionadas; j++) {
+                combos.get(i).addItem(""+(j+1));
+                
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            
+            
         }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Principal().setVisible(true);
-            }
-        });
+    }
+    private void combos(){
+        combos.add(suma1cb);
+        combos.add(suma2cb);
+        combos.add(resta1cb);
+        combos.add(resta2cb);
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> MATRICES;
+    private javax.swing.JTextArea areatexto;
     private javax.swing.JComboBox<String> boxcolumna;
     private javax.swing.JComboBox<String> boxfila;
-    private javax.swing.JButton btn_Imprimir;
     private javax.swing.JButton btn_crear;
+    private javax.swing.JButton btn_imprimir;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel matrizNombre;
+    private javax.swing.JComboBox<String> pasoscb;
+    private javax.swing.JComboBox<String> resta1cb;
+    private javax.swing.JComboBox<String> resta2cb;
+    private javax.swing.JButton resta_aplicar;
+    private javax.swing.JComboBox<String> restacb;
+    private javax.swing.JComboBox<String> suma1cb;
+    private javax.swing.JComboBox<String> suma2cb;
+    private javax.swing.JButton suma_aplicar;
+    private javax.swing.JComboBox<String> sumacb;
+    private javax.swing.JPanel tab_op;
+    private javax.swing.JPanel tab_pasos;
+    private javax.swing.JTextField txt_resta1;
+    private javax.swing.JTextField txt_resta2;
+    private javax.swing.JTextField txt_suma1;
+    private javax.swing.JTextField txt_suma2;
+    private javax.swing.JTabbedPane ventanaTab;
     // End of variables declaration//GEN-END:variables
 }

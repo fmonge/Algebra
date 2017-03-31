@@ -7,9 +7,9 @@ import java.util.ArrayList;
  *
  * @author Curso
  */
-public class Matriz {
+public class Matriz implements Cloneable {
     private ArrayList<ArrayList<Fraccion>> matriz;
-  
+    
     public Matriz() {
         matriz = new ArrayList<ArrayList<Fraccion>>();        
     }
@@ -18,9 +18,7 @@ public class Matriz {
     }
     public ArrayList<ArrayList<Fraccion>> getMatriz() {
         return matriz;
-    }
-
-        
+    }     
     public Fraccion multiplicarFraccion( Fraccion f1,  Fraccion f2){
         
         int d = f1.getDenominador()*f2.getDenominador();
@@ -73,7 +71,7 @@ public class Matriz {
     public ArrayList<Fraccion> escalarPorFila(Fraccion n,int fila){
         ArrayList<Fraccion> filatmp = new ArrayList<>();
         for (int i = 0; i < matriz.get(fila).size(); i++) {
-            filatmp.add( matriz.get(fila).get(i)*n);
+            
             
         }      
         return  filatmp;
@@ -82,79 +80,98 @@ public class Matriz {
     //En este caso la suma de las filas es sin muplicacion al inicio Ejemplo [F1-->F2]
     public void sumaFila(int filaN,int filaM){ 
         for (int i = 0; i < matriz.get(filaN).size(); i++) {
-            matriz.get(filaN).set(i, matriz.get(filaN).get(i)+matriz.get(filaN).get(i));
-            
+            Fraccion f = new Fraccion(0, 0);
+            f = f.operacion(matriz.get(filaN).get(i), matriz.get(filaM).get(i), '+');
+            matriz.get(filaM).set(i, f);   
         }
 
     }
     //En este caso  la  filaN lleva multiplicacion al inicio Ejemplo: 3F1-->F2
-    public void sumaFila(Fraccion escalarN,int filaN ,int filaM){
-        ArrayList<Fraccion> filatmp = escalarPorFila(escalarN, filaN);
+    public void sumaFila(int escalarN,int filaN ,String o,int filaM){
         for (int i = 0; i < matriz.get(filaN).size(); i++) {
-            matriz.get(filaN).set(i, filatmp.get(i)+matriz.get(filaM).get(i));
-            
+            Fraccion f = new Fraccion(0, 0);
+            f = f.operacion(f.operacion(matriz.get(filaN).get(i), escalarN), matriz.get(filaM).get(i), '+');
+            f.operacion(f, escalarN);
+            matriz.get(filaM).set(i, f);   
         }
     }
     //En este casola filaM lleva multiplicacion al inicio [Ejemplo F1-->3F2]
-    public void sumaFila(int filaN,Fraccion escalarM,int filaM){
-
-        ArrayList<Fraccion> filatmp = escalarPorFila(escalarM, filaM);
-        for (int i = 0; i < matriz.get(filaN).size(); i++) {
-            matriz.get(filaN).set(i, matriz.get(filaN).get(i)+filatmp.get(i));
-            
-        }
+    public void sumaFila(String o,int filaN,int escalarM,int filaM){
+            for (int i = 0; i < matriz.get(filaN).size(); i++) {
+                Fraccion f = new Fraccion(0, 0);
+                f = f.operacion(matriz.get(filaN).get(i),f.operacion(matriz.get(filaM).get(i), escalarM), '+');
+                f.operacion(f, escalarM);
+                matriz.get(filaM).set(i, f);   
+             }
     }
     
     
     //En este caso filaN y filaM llevan multiplicacion al inicio [Ejemplo 4F1-->5F2]
-    public void sumaFila(Fraccion escalarN,int filaN,Fraccion escalarM,int filaM){  
-        ArrayList<Fraccion> filatmp1 = escalarPorFila(escalarN, filaN);
-        ArrayList<Fraccion> filatmp2 = escalarPorFila(escalarM, filaM);
+    public void sumaFila(int escalarN,int filaN,int escalarM,int filaM){  
         for (int i = 0; i < matriz.get(filaN).size(); i++) {
-            matriz.get(filaN).set(i, filatmp2.get(i)+filatmp1.get(i));
-            
-        }
+                Fraccion f = new Fraccion(0, 0);
+                f = f.operacion(f.operacion(matriz.get(filaN).get(i), escalarN),f.operacion(matriz.get(filaM).get(i), escalarM), '+');
+                f.operacion(f, escalarM);
+                matriz.get(filaM).set(i, f);   
+             }
     }
         //En este caso la suma de las filas es sin muplicacion al inicio Ejemplo [F1-->F2]
     public void restaFila(int filaN,int filaM){ 
         for (int i = 0; i < matriz.get(filaN).size(); i++) {
-            matriz.get(filaN).set(i, matriz.get(filaN).get(i)-matriz.get(filaN).get(i));
-            
+            Fraccion f = new Fraccion(0, 0);
+            f = f.operacion(matriz.get(filaN).get(i), matriz.get(filaM).get(i), '+');
+            matriz.get(filaM).set(i, f);   
         }
 
     }
     //En este caso  la  filaN lleva multiplicacion al inicio Ejemplo: 3F1-->F2
-    public void restaFila(Fraccion escalarN,int filaN ,int filaM){
-        ArrayList<Fraccion> filatmp = escalarPorFila(escalarN, filaN);
+    public void restaFila(int escalarN,int filaN ,String o,int filaM){
         for (int i = 0; i < matriz.get(filaN).size(); i++) {
-            matriz.get(filaN).set(i, filatmp.get(i)-matriz.get(filaM).get(i));
-            
+            Fraccion f = new Fraccion(0, 0);
+            f = f.operacion(f.operacion(matriz.get(filaN).get(i), escalarN), matriz.get(filaM).get(i), '+');
+            f.operacion(f, escalarN);
+            matriz.get(filaM).set(i, f);   
         }
 
     }
     //En este casola filaM lleva multiplicacion al inicio [Ejemplo F1-->3F2]
-    public void restaFila(int filaN,Fraccion escalarM,int filaM){
-        ArrayList<Fraccion> filatmp = escalarPorFila(escalarM, filaM);
+    public void restaFila(String o,int filaN,int escalarM,int filaM){
         for (int i = 0; i < matriz.get(filaN).size(); i++) {
-            matriz.get(filaN).set(i, matriz.get(filaN).get(i)-filatmp.get(i));
-            
-        }
+                Fraccion f = new Fraccion(0, 0);
+                f = f.operacion(matriz.get(filaN).get(i),f.operacion(matriz.get(filaM).get(i), escalarM), '+');
+                f.operacion(f, escalarM);
+                matriz.get(filaM).set(i, f);   
+             }
     }
     
     //En este caso filaN y filaM llevan multiplicacion al inicio [Ejemplo 4F1-->5F2]
-    public void restaFila(Fraccion escalarN,int filaN,Fraccion escalarM,int filaM){
-        ArrayList<Fraccion> filatmp1 = escalarPorFila(escalarN, filaN);
-        ArrayList<Fraccion> filatmp2 = escalarPorFila(escalarM, filaM);
+    public void restaFila(int escalarN,int filaN,int escalarM,int filaM){
         for (int i = 0; i < matriz.get(filaN).size(); i++) {
-            matriz.get(filaN).set(i, filatmp2.get(i)-filatmp1.get(i));
-            
-        }
+                Fraccion f = new Fraccion(0, 0);
+                f = f.operacion(f.operacion(matriz.get(filaN).get(i), escalarN),f.operacion(matriz.get(filaM).get(i), escalarM), '+');
+                f.operacion(f, escalarM);
+                matriz.get(filaM).set(i, f);   
+             }
     }
-    public void imprimirMatriz(){
+    public String imprimirMatriz(){
+        String a = "";
         for (int i = 0; i < matriz.size(); i++) {
-            System.out.println(matriz.get(i).toString());
+            a=a+matriz.get(i).toString()+System.lineSeparator();
             
         }
+        return a;
     
+    } 
+    public int filasSize(){
+       return  matriz.size();
     }
+    public int columnasSize(){
+        return matriz.get(0).size();
+    }
+
+    @Override
+    protected Matriz clone() throws CloneNotSupportedException {
+        return (Matriz) super.clone(); //To change body of generated methods, choose Tools | Templates.
+    }
+    
 }
