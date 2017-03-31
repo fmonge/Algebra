@@ -26,7 +26,7 @@
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -188,7 +188,7 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="172" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                               <Component id="filler6" min="-2" pref="13" max="-2" attributes="0"/>
                           </Group>
                           <Component id="btn_aceptar" min="-2" pref="100" max="-2" attributes="0"/>
@@ -206,9 +206,9 @@
               <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" pref="36" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="filler4" min="-2" pref="681" max="-2" attributes="0"/>
-                  <Component id="filler3" min="-2" pref="695" max="-2" attributes="0"/>
-                  <Component id="filler2" min="-2" pref="657" max="-2" attributes="0"/>
+                  <Component id="filler4" min="-2" pref="20" max="-2" attributes="0"/>
+                  <Component id="filler3" min="-2" pref="20" max="-2" attributes="0"/>
+                  <Component id="filler2" min="-2" pref="20" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -216,165 +216,165 @@
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="txt3_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt3_1" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="lbl3" min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="lbl3" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="txt3_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt3_2" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                          <Component id="txt8_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt8_1" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="lbl8" min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="lbl8" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="txt8_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt8_2" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                          <Component id="txt13_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt13_1" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="lbl13" min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="lbl13" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="txt13_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt13_2" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                          <Component id="txt18_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt18_1" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="lbl18" min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="lbl18" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="txt18_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt18_2" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                                          <Component id="txt23_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt23_1" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="lbl23" min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="lbl23" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="txt23_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt23_2" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
-                                          <Component id="txt2_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt2_1" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="lbl2" min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="lbl2" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="txt2_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt2_2" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                          <Component id="txt7_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt7_1" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="lbl7" min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="lbl7" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="txt7_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt7_2" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                          <Component id="txt12_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt12_1" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="lbl12" min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="lbl12" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="txt12_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt12_2" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                          <Component id="txt17_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt17_1" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="lbl17" min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="lbl17" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="txt17_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt17_2" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                                          <Component id="txt22_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt22_1" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="lbl22" min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="lbl22" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="txt22_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt22_2" min="-2" pref="20" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="txt5_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt5_1" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="lbl5" min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="lbl5" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="txt5_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt5_2" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                          <Component id="txt10_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt10_1" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="lbl10" min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="lbl10" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="txt10_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt10_2" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                          <Component id="txt15_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt15_1" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="lbl15" min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="lbl15" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="txt15_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt15_2" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                          <Component id="txt20_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt20_1" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="lbl20" min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="lbl20" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="txt20_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt20_2" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                                          <Component id="txt25_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt25_1" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="lbl25" min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="lbl25" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="txt25_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt25_2" min="-2" pref="20" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="filler1" alignment="1" max="32767" attributes="0"/>
                                       <Group type="102" alignment="1" attributes="0">
-                                          <Component id="txt4_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt4_1" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="lbl4" min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="lbl4" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="txt4_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt4_2" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                          <Component id="txt9_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt9_1" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="lbl9" min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="lbl9" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="txt9_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt9_2" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                          <Component id="txt14_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt14_1" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="lbl14" min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="lbl14" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="txt14_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt14_2" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                          <Component id="txt19_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt19_1" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="lbl19" min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="lbl19" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="txt19_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt19_2" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                                          <Component id="txt24_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt24_1" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="lbl24" min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="lbl24" min="-2" pref="20" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                          <Component id="txt24_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="txt24_2" min="-2" pref="20" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="filler6" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="txt1_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="txt1_1" min="-2" pref="20" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                      <Component id="lbl1" min="-2" pref="10" max="-2" attributes="0"/>
+                                      <Component id="lbl1" min="-2" pref="20" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                      <Component id="txt1_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="txt1_2" min="-2" pref="20" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                      <Component id="txt6_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="txt6_1" min="-2" pref="20" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                      <Component id="lbl6" min="-2" pref="10" max="-2" attributes="0"/>
+                                      <Component id="lbl6" min="-2" pref="20" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                      <Component id="txt6_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="txt6_2" min="-2" pref="20" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                      <Component id="txt11_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="txt11_1" min="-2" pref="20" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                      <Component id="lbl11" min="-2" pref="10" max="-2" attributes="0"/>
+                                      <Component id="lbl11" min="-2" pref="20" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                      <Component id="txt11_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="txt11_2" min="-2" pref="20" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                      <Component id="txt16_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="txt16_1" min="-2" pref="20" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                      <Component id="lbl16" min="-2" pref="10" max="-2" attributes="0"/>
+                                      <Component id="lbl16" min="-2" pref="20" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                      <Component id="txt16_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="txt16_2" min="-2" pref="20" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                                      <Component id="txt21_1" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="txt21_1" min="-2" pref="20" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                      <Component id="lbl21" min="-2" pref="10" max="-2" attributes="0"/>
+                                      <Component id="lbl21" min="-2" pref="20" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                      <Component id="txt21_2" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="txt21_2" min="-2" pref="20" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
@@ -383,7 +383,7 @@
                                   <Component id="btn_cancelar" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Component id="filler5" min="-2" pref="685" max="-2" attributes="0"/>
+                          <Component id="filler5" min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>

@@ -7,7 +7,7 @@ import java.util.ArrayList;
  *
  * @author Curso
  */
-public class Matriz implements Cloneable {
+public class Matriz  {
     private ArrayList<ArrayList<Fraccion>> matriz;
     
     public Matriz() {
@@ -45,7 +45,10 @@ public class Matriz implements Cloneable {
         return columna;
     }
     public void cambioFila(int filaN,int filaM){
-        matriz.set(filaN, matriz.get(filaM));
+        ArrayList<Fraccion> tmp1 = matriz.get(filaM);
+        ArrayList<Fraccion> tmp2 = matriz.get(filaN);
+        matriz.set(filaN, tmp1);
+        matriz.set(filaM, tmp2);
     }
     //multiplica el numero de entrada por cada elemento de la matriz
     public void multiplicacionEscalar(int  escalar){   
@@ -169,9 +172,10 @@ public class Matriz implements Cloneable {
         return matriz.get(0).size();
     }
 
-    @Override
-    protected Matriz clone() throws CloneNotSupportedException {
-        return (Matriz) super.clone(); //To change body of generated methods, choose Tools | Templates.
+    public void setMatriz(ArrayList<ArrayList<Fraccion>> matriz) {
+        this.matriz = matriz;
     }
+
+    
     
 }

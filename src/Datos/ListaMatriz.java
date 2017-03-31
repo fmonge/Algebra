@@ -17,6 +17,17 @@ public class ListaMatriz {
     private String nombre="";
     private ArrayList<Matriz> matrices= new ArrayList<Matriz>();
     private Matriz inversa = new Matriz();
+    ArrayList<String> operaciones = new ArrayList<>();
+    public void agregarOperacion(String op){
+        operaciones.add(op);
+    }
+    public ArrayList<String> getOperaciones() {
+        return operaciones;
+    }
+
+    public void setOperaciones(ArrayList<String> operaciones) {
+        this.operaciones = operaciones;
+    }
     public ArrayList<Matriz> getMatrices() {
         return matrices;
     }
@@ -47,11 +58,10 @@ public class ListaMatriz {
         return matrices.size();
     }
     public void duplicar(){
-        try {
-            matrices.add(getUltimo().clone());
-        } catch (CloneNotSupportedException ex) {
-            
-        }
+        Matriz m = new Matriz();
+        ArrayList<ArrayList<Fraccion>> a = new ArrayList<>(getUltimo().getMatriz());
+        m.setMatriz(a);
+        matrices.add(m);
     }
     public Matriz getUltimo(){
         return matrices.get(matrices.size()-1);
@@ -61,8 +71,26 @@ public class ListaMatriz {
         for (int i = 0; i < matrices.size(); i++) {
             System.out.println(""+i);
             System.out.println(matrices.get(i).imprimirMatriz());
-            System.out.println("");
+            System.out.println("---------------------------------------------------------------");
         }
     }
+    public String imprimirTXT(){
+        String s = "";
+        for (int i = 0; i < matrices.size(); i++) {
+            if (i != matrices.size()-1){
+                s=s+matrices.get(i).imprimirMatriz()+System.lineSeparator()+"Operacion:"+operaciones.get(i)
+                    +System.lineSeparator()+"----------------------------------------------------------------------"+System.lineSeparator();
+            }
+            else{
+                s=s+matrices.get(i).imprimirMatriz()+System.lineSeparator()
+                    +System.lineSeparator()+"----------------------------------------------------------------------"+System.lineSeparator();
+
+            }
+            
+            
+        }
+        return s;
+    }
+    
     
 }

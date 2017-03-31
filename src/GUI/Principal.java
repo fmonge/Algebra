@@ -50,13 +50,14 @@ public class Principal extends javax.swing.JFrame {
         btn_crear = new javax.swing.JButton();
         ventanaTab = new javax.swing.JTabbedPane();
         tab_pasos = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        areatexto = new javax.swing.JTextArea();
         MATRICES = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         pasoscb = new javax.swing.JComboBox<>();
         btn_imprimir = new javax.swing.JButton();
+        btn_secuencia = new javax.swing.JToggleButton();
+        scroll = new javax.swing.JScrollPane();
+        areatexto = new javax.swing.JTextArea();
         tab_op = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         sumacb = new javax.swing.JComboBox<>();
@@ -79,6 +80,17 @@ public class Principal extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         restacb = new javax.swing.JComboBox<>();
         jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        cambio2cb = new javax.swing.JComboBox<>();
+        cambio1cb = new javax.swing.JComboBox<>();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        cambio_aplicar = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        inversa_aplicar = new javax.swing.JButton();
+        jLabel20 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         matrizNombre = new javax.swing.JLabel();
 
@@ -109,11 +121,6 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        areatexto.setColumns(20);
-        areatexto.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
-        areatexto.setRows(5);
-        jScrollPane1.setViewportView(areatexto);
-
         MATRICES.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 MATRICESMouseClicked(evt);
@@ -135,11 +142,21 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        btn_secuencia.setText("ImprimirSecuencia");
+        btn_secuencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_secuenciaActionPerformed(evt);
+            }
+        });
+
+        areatexto.setColumns(20);
+        areatexto.setRows(5);
+        scroll.setViewportView(areatexto);
+
         javax.swing.GroupLayout tab_pasosLayout = new javax.swing.GroupLayout(tab_pasos);
         tab_pasos.setLayout(tab_pasosLayout);
         tab_pasosLayout.setHorizontalGroup(
             tab_pasosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
             .addGroup(tab_pasosLayout.createSequentialGroup()
                 .addGroup(tab_pasosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
@@ -150,8 +167,11 @@ public class Principal extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(pasoscb, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btn_imprimir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(btn_imprimir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btn_secuencia)))
+                .addGap(0, 155, Short.MAX_VALUE))
+            .addComponent(scroll)
         );
         tab_pasosLayout.setVerticalGroup(
             tab_pasosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -163,9 +183,11 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(MATRICES, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
                     .addComponent(pasoscb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_imprimir))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn_imprimir)
+                    .addComponent(btn_secuencia))
+                .addGap(18, 18, 18)
+                .addComponent(scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         ventanaTab.addTab("Pasos", tab_pasos);
@@ -237,6 +259,38 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel15.setText("-------------------------------------------------------------------------------------");
 
+        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel16.setText("FilaN");
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel17.setText("FilaM");
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel18.setText("Cambio de Filas");
+
+        jLabel19.setText("-------------------------------------------------------------------------------------");
+
+        cambio_aplicar.setText("Aplicar");
+        cambio_aplicar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambio_aplicarActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel7.setText("Calculo de la Inversa");
+
+        jLabel8.setText("-------------------------------------------------------------------------------------");
+
+        inversa_aplicar.setText("Aplicar");
+        inversa_aplicar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inversa_aplicarActionPerformed(evt);
+            }
+        });
+
+        jLabel20.setText("<---->");
+
         javax.swing.GroupLayout tab_opLayout = new javax.swing.GroupLayout(tab_op);
         tab_op.setLayout(tab_opLayout);
         tab_opLayout.setHorizontalGroup(
@@ -259,14 +313,22 @@ public class Principal extends javax.swing.JFrame {
                         .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel11)
                             .addComponent(suma2cb, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, tab_opLayout.createSequentialGroup()
-                            .addComponent(jLabel5)
-                            .addGap(18, 18, 18)
-                            .addComponent(sumacb, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(suma_aplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addGroup(tab_opLayout.createSequentialGroup()
+                        .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, tab_opLayout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addGap(18, 18, 18)
+                                .addComponent(sumacb, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(suma_aplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGap(62, 62, 62)
+                        .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(tab_opLayout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addGap(18, 18, 18)
+                                .addComponent(inversa_aplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel8)))
                     .addGroup(tab_opLayout.createSequentialGroup()
                         .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(tab_opLayout.createSequentialGroup()
@@ -282,15 +344,32 @@ public class Principal extends javax.swing.JFrame {
                         .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel13)
                             .addComponent(resta2cb, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, tab_opLayout.createSequentialGroup()
-                            .addComponent(jLabel14)
-                            .addGap(18, 18, 18)
-                            .addComponent(restacb, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(resta_aplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.LEADING)))
-                .addGap(0, 523, Short.MAX_VALUE))
+                    .addComponent(jLabel19)
+                    .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(tab_opLayout.createSequentialGroup()
+                            .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel16)
+                                .addComponent(cambio1cb, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(17, 17, 17)
+                            .addComponent(jLabel20)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel17)
+                                .addComponent(cambio2cb, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(102, 102, 102))
+                        .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, tab_opLayout.createSequentialGroup()
+                                .addComponent(jLabel14)
+                                .addGap(18, 18, 18)
+                                .addComponent(restacb, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(resta_aplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGroup(tab_opLayout.createSequentialGroup()
+                            .addComponent(jLabel18)
+                            .addGap(156, 156, 156)
+                            .addComponent(cambio_aplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(0, 92, Short.MAX_VALUE))
         );
         tab_opLayout.setVerticalGroup(
             tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -300,7 +379,9 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(sumacb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(suma_aplicar))
+                    .addComponent(suma_aplicar)
+                    .addComponent(jLabel7)
+                    .addComponent(inversa_aplicar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
@@ -312,7 +393,9 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(suma2cb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(suma1cb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel6)
+                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel8))
                 .addGap(18, 18, 18)
                 .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
@@ -330,7 +413,24 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(resta1cb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel15)
-                .addContainerGap(196, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(tab_opLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel18))
+                    .addComponent(cambio_aplicar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(jLabel17))
+                .addGap(4, 4, 4)
+                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cambio2cb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cambio1cb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel20))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel19)
+                .addContainerGap(79, Short.MAX_VALUE))
         );
 
         ventanaTab.addTab("Operaciones ", tab_op);
@@ -338,7 +438,8 @@ public class Principal extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setText("Matriz Seleccionada :");
 
-        matrizNombre.setText("??");
+        matrizNombre.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        matrizNombre.setText("No hay matriz slecionada!!!");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -408,7 +509,7 @@ public class Principal extends javax.swing.JFrame {
             //System.out.println(pasoscb.getSelectedIndex());
             areatexto.setText("");
             System.out.println(matrizSeleccionada.size());
-            areatexto.setText(matrizSeleccionada(pasoscb.getSelectedIndex()));
+            areatexto.setText(matrizSeleccionada.getMatrices().get(pasoscb.getSelectedIndex()).imprimirMatriz());
             matrizSeleccionada.imprimir();
         } catch (Exception e) {
             System.out.println(e);
@@ -443,63 +544,110 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_resta1ActionPerformed
 
     private void suma_aplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_suma_aplicarActionPerformed
-        
-        switch(sumacb.getSelectedItem().toString()){
+        try {
+            switch(sumacb.getSelectedItem().toString()){
             case "Fn-->Fm":
                 matrizSeleccionada.duplicar();
                 matrizSeleccionada.getUltimo().sumaFila( suma1cb.getSelectedIndex(),suma2cb.getSelectedIndex() );
-                
+                matrizSeleccionada.agregarOperacion("Fn-->Fm");
                 break;
             case "xFn-->Fm":
                 matrizSeleccionada.duplicar();
                 matrizSeleccionada.getUltimo().sumaFila(Integer.parseInt(txt_suma1.getText()), suma1cb.getSelectedIndex(), "null",suma2cb.getSelectedIndex());
+                matrizSeleccionada.agregarOperacion("xFn-->Fm");
                 break;
             case "Fn-->xFm":
                 matrizSeleccionada.duplicar();
                 matrizSeleccionada.getUltimo().sumaFila("null", suma1cb.getSelectedIndex(),Integer.parseInt(txt_suma2.getText()),suma2cb.getSelectedIndex());
+                matrizSeleccionada.agregarOperacion("Fn-->xFm");
                 break;
             case "xFn-->xFm":
                 matrizSeleccionada.duplicar();
                 matrizSeleccionada.getUltimo().sumaFila(Integer.parseInt(txt_suma1.getText()),suma1cb.getSelectedIndex(),Integer.parseInt(txt_suma2.getText()), suma2cb.getSelectedIndex());
+                matrizSeleccionada.agregarOperacion("xFn-->xFm");
                 break;
         }
         JOptionPane.showMessageDialog(null, "Operacion realizada");
         actualizar();
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Favor ingrese los valores correctos ");
+        }
+        
         
         // TODO add your handling code here:
     }//GEN-LAST:event_suma_aplicarActionPerformed
 
     private void resta_aplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resta_aplicarActionPerformed
-        switch(sumacb.getSelectedItem().toString()){
+        try {
+            switch(sumacb.getSelectedItem().toString()){
             case "Fn-->Fm":
                 matrizSeleccionada.duplicar();
                 matrizSeleccionada.getUltimo().restaFila(resta1cb.getSelectedIndex(),restacb.getSelectedIndex() );
-                
+                matrizSeleccionada.agregarOperacion("Fn-->Fm");
                 break;
             case "xFn-->Fm":
                 matrizSeleccionada.duplicar();
                 matrizSeleccionada.getUltimo().restaFila(Integer.parseInt(txt_resta1.getText()), resta1cb.getSelectedIndex(), "null",resta2cb.getSelectedIndex());
+                matrizSeleccionada.agregarOperacion("xFn-->Fm");
                 break;
             case "Fn-->xFm":
                 matrizSeleccionada.duplicar();
                 matrizSeleccionada.getUltimo().restaFila("null", resta1cb.getSelectedIndex(),Integer.parseInt(txt_resta2.getText()),resta2cb.getSelectedIndex());
+                matrizSeleccionada.agregarOperacion("Fn-->xFm");
                 break;
             case "xFn-->xFm":
                 matrizSeleccionada.duplicar();
                 matrizSeleccionada.getUltimo().restaFila(Integer.parseInt(txt_resta1.getText()),resta1cb.getSelectedIndex(),Integer.parseInt(txt_resta2.getText()), resta2cb.getSelectedIndex());
+                matrizSeleccionada.agregarOperacion("xFn-->xFm");
                 break;
         }
-        JOptionPane.showMessageDialog(null, "Operacion realizada");
-        actualizar();
+        
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Favor ingrese los valores correctos ");
+        }
+        
         
 // TODO add your handling code here:
     }//GEN-LAST:event_resta_aplicarActionPerformed
+
+    private void cambio_aplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cambio_aplicarActionPerformed
+            matrizSeleccionada.duplicar();
+            matrizSeleccionada.getUltimo().cambioFila(cambio1cb.getSelectedIndex(), cambio2cb.getSelectedIndex());
+            matrizSeleccionada.agregarOperacion(cambio1cb.getSelectedIndex()+"Fn<-->"+cambio2cb.getSelectedIndex()+"Fm");
+            JOptionPane.showMessageDialog(null, "Operacion realizada");
+            actualizar();
+        
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cambio_aplicarActionPerformed
+
+    private void btn_secuenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_secuenciaActionPerformed
+        try {
+            //System.out.println(pasoscb.getSelectedIndex());
+            areatexto.setText("");
+            System.out.println();
+            areatexto.setText(matrizSeleccionada.imprimirTXT());
+            
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_secuenciaActionPerformed
+
+    private void inversa_aplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inversa_aplicarActionPerformed
+        matrizSeleccionada.agregarOperacion("Inversa("+matrizSeleccionada.getNombre()+")");
+
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inversa_aplicarActionPerformed
     public void actualizar(){
         try {
                
                 matrizNombre.setText(MATRICES.getSelectedItem().toString());               
                 DefaultComboBoxModel model = (DefaultComboBoxModel) pasoscb.getModel();
                 model.removeAllElements();
+                
                 pasoscb.addItem("Principal");
             for (int i = 1; i < matrizSeleccionada.size(); i++) {           
                 pasoscb.addItem(i+"");
@@ -533,10 +681,13 @@ public class Principal extends javax.swing.JFrame {
         matricesIngresadas.add(lm);
     }
     
-    public String matrizSeleccionada(int a){
-        return matrizSeleccionada.getMatrices().get(pasoscb.getSelectedIndex()).imprimirMatriz();
-    }
+    
     public void setcombos(){
+        for (int i = 0; i < combos.size(); i++) {
+            DefaultComboBoxModel model = (DefaultComboBoxModel) combos.get(i).getModel();
+            model.removeAllElements();
+            
+        }
         for (int i = 0; i < combos.size(); i++) {
             for (int j = 0; j < filaseleccionadas; j++) {
                 combos.get(i).addItem(""+(j+1));
@@ -551,6 +702,8 @@ public class Principal extends javax.swing.JFrame {
         combos.add(suma2cb);
         combos.add(resta1cb);
         combos.add(resta2cb);
+        combos.add(cambio1cb);
+        combos.add(cambio2cb);
         
     }
 
@@ -561,6 +714,11 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> boxfila;
     private javax.swing.JButton btn_crear;
     private javax.swing.JButton btn_imprimir;
+    private javax.swing.JToggleButton btn_secuencia;
+    private javax.swing.JComboBox<String> cambio1cb;
+    private javax.swing.JComboBox<String> cambio2cb;
+    private javax.swing.JButton cambio_aplicar;
+    private javax.swing.JButton inversa_aplicar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -568,19 +726,26 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel matrizNombre;
     private javax.swing.JComboBox<String> pasoscb;
     private javax.swing.JComboBox<String> resta1cb;
     private javax.swing.JComboBox<String> resta2cb;
     private javax.swing.JButton resta_aplicar;
     private javax.swing.JComboBox<String> restacb;
+    private javax.swing.JScrollPane scroll;
     private javax.swing.JComboBox<String> suma1cb;
     private javax.swing.JComboBox<String> suma2cb;
     private javax.swing.JButton suma_aplicar;
