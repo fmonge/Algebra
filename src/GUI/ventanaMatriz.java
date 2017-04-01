@@ -1161,7 +1161,7 @@ public class ventanaMatriz extends javax.swing.JFrame {
                         int num2 = 0 ;
                         num1 = Integer.parseInt(componentestxt1.get(Integer.parseInt(txt[i])).getText());                      
                         num2 = Integer.parseInt(componentestxt2.get(Integer.parseInt(txt[i])).getText());
-                        arraytmp.add(new Fraccion(num2,num1));                            
+                        arraytmp.add(new Fraccion(num1,num2));                            
                 }
 
 

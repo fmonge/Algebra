@@ -6,6 +6,7 @@
 package Datos;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -58,10 +59,9 @@ public class ListaMatriz {
         return matrices.size();
     }
     public void duplicar(){
-        Matriz m = new Matriz();
-        ArrayList<ArrayList<Fraccion>> a = new ArrayList<>(getUltimo().getMatriz());
-        m.setMatriz(a);
+        Matriz m = new Matriz(new ArrayList<ArrayList<Fraccion>>(getUltimo().getMatriz()));
         matrices.add(m);
+        
     }
     public Matriz getUltimo(){
         return matrices.get(matrices.size()-1);

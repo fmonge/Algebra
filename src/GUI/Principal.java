@@ -616,8 +616,7 @@ public class Principal extends javax.swing.JFrame {
     private void btn_imprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_imprimirActionPerformed
         try {
             //System.out.println(pasoscb.getSelectedIndex());
-            areatexto.setText("");
-            System.out.println(matrizSeleccionada.size());
+            areatexto.setText("");          
             areatexto.setText(matrizSeleccionada.getMatrices().get(pasoscb.getSelectedIndex()).imprimirMatriz());
             matrizSeleccionada.imprimir();
         } catch (Exception e) {
@@ -657,29 +656,29 @@ public class Principal extends javax.swing.JFrame {
             switch(sumacb.getSelectedItem().toString()){
             case "Fn-->Fm":
                 matrizSeleccionada.duplicar();
-                matrizSeleccionada.getUltimo().sumaFila(suma1cb.getSelectedIndex(),sumacb.getSelectedIndex() );
-                matrizSeleccionada.agregarOperacion("Fn-->Fm");
+                matrizSeleccionada.getUltimo().sumaFila(suma1cb.getSelectedIndex(),suma2cb.getSelectedIndex() );
+                matrizSeleccionada.agregarOperacion("Suma:"+"Fn-->Fm");
                 break;
             case "xFn-->Fm":
                 Fraccion f1 = new Fraccion(Integer.parseInt(txt_suma1.getText()),Integer.parseInt(txt_suma1_1.getText()));
                 matrizSeleccionada.duplicar();
                 matrizSeleccionada.getUltimo().sumaFila(f1, suma1cb.getSelectedIndex(), "null",suma2cb.getSelectedIndex());
-                System.out.println("no");
-                matrizSeleccionada.agregarOperacion(f1.getNominador()+"/"+f1.getDenominador()+"xFn-->Fm");
-                System.out.println("si");
+                
+                matrizSeleccionada.agregarOperacion("Suma:"+f1.getNominador()+"/"+f1.getDenominador()+"xFn-->Fm");
+                
                 break;
             case "Fn-->xFm":
                 Fraccion f2 = new Fraccion(Integer.parseInt(txt_suma2.getText()),Integer.parseInt(txt_suma2_2.getText()));
                 matrizSeleccionada.duplicar();
                 matrizSeleccionada.getUltimo().sumaFila("null", suma1cb.getSelectedIndex(),f2,suma2cb.getSelectedIndex());
-                matrizSeleccionada.agregarOperacion("Fn-->"+f2.getNominador()+"/"+f2.getDenominador()+"Fm");
+                matrizSeleccionada.agregarOperacion("Suma:"+"Fn-->"+f2.getNominador()+"/"+f2.getDenominador()+"Fm");
                 break;
             case "xFn-->xFm":
                 Fraccion f3 = new Fraccion(Integer.parseInt(txt_suma1.getText()),Integer.parseInt(txt_suma1_1.getText()));
                 Fraccion f4 = new Fraccion(Integer.parseInt(txt_suma2.getText()),Integer.parseInt(txt_suma2_2.getText()));
                 matrizSeleccionada.duplicar();
                 matrizSeleccionada.getUltimo().sumaFila(f3,suma1cb.getSelectedIndex(),f4, suma2cb.getSelectedIndex());
-                matrizSeleccionada.agregarOperacion(f3.getNominador()+"/"+f3.getDenominador()+"xFn-->"+f4.getNominador()+"/"+f4.getDenominador()+"xFm");
+                matrizSeleccionada.agregarOperacion("Suma:"+f3.getNominador()+"/"+f3.getDenominador()+"xFn-->"+f4.getNominador()+"/"+f4.getDenominador()+"xFm");
                 break;
         }
         JOptionPane.showMessageDialog(null, "Operacion realizada");
@@ -698,33 +697,36 @@ public class Principal extends javax.swing.JFrame {
             switch(restacb.getSelectedItem().toString()){
             case "Fn-->Fm":
                 matrizSeleccionada.duplicar();
-                matrizSeleccionada.getUltimo().restaFila(resta1cb.getSelectedIndex(),restacb.getSelectedIndex() );
-                matrizSeleccionada.agregarOperacion("Fn-->Fm");
+                matrizSeleccionada.getUltimo().restaFila(resta1cb.getSelectedIndex(),resta2cb.getSelectedIndex() );
+                matrizSeleccionada.agregarOperacion("Resta:"+"Fn-->Fm");
                 break;
             case "xFn-->Fm":
                 Fraccion f1 = new Fraccion(Integer.parseInt(txt_resta1.getText()),Integer.parseInt(txt_resta1_1.getText()));
                 matrizSeleccionada.duplicar();
                 matrizSeleccionada.getUltimo().restaFila(f1, resta1cb.getSelectedIndex(), "null",resta2cb.getSelectedIndex());
-                matrizSeleccionada.agregarOperacion(f1.getNominador()+"/"+f1.getDenominador()+"xFn-->Fm");
+                matrizSeleccionada.agregarOperacion("Resta:"+f1.getNominador()+"/"+f1.getDenominador()+"xFn-->Fm");
                 break;
             case "Fn-->xFm":
                 Fraccion f2 = new Fraccion(Integer.parseInt(txt_resta2.getText()),Integer.parseInt(txt_resta2_2.getText()));
                 matrizSeleccionada.duplicar();
                 matrizSeleccionada.getUltimo().restaFila("null", resta1cb.getSelectedIndex(),f2,resta2cb.getSelectedIndex());
-                matrizSeleccionada.agregarOperacion("Fn-->"+f2.getNominador()+"/"+f2.getDenominador()+"Fm");
+                matrizSeleccionada.agregarOperacion("Resta:"+"Fn-->"+f2.getNominador()+"/"+f2.getDenominador()+"Fm");
                 break;
             case "xFn-->xFm":
                 Fraccion f3 = new Fraccion(Integer.parseInt(txt_resta1.getText()),Integer.parseInt(txt_resta1_1.getText()));
                 Fraccion f4 = new Fraccion(Integer.parseInt(txt_resta2.getText()),Integer.parseInt(txt_resta2_2.getText()));
                 matrizSeleccionada.duplicar();
                 matrizSeleccionada.getUltimo().restaFila(f3,resta1cb.getSelectedIndex(),f4, resta2cb.getSelectedIndex());
-                matrizSeleccionada.agregarOperacion(f3.getNominador()+"/"+f3.getDenominador()+"xFn-->"+f4.getNominador()+"/"+f4.getDenominador()+"xFm");
+                matrizSeleccionada.agregarOperacion("Resta:"+f3.getNominador()+"/"+f3.getDenominador()+"xFn-->"+f4.getNominador()+"/"+f4.getDenominador()+"xFm");
                 break;
         }
+            JOptionPane.showMessageDialog(null, "Agregado");
+            actualizar();
         
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Favor ingrese los valores correctos ");
+            JOptionPane.showMessageDialog(null, "Favor ingrese los valores correctos "+e);
         }
+        
         
         
 // TODO add your handling code here:
@@ -733,7 +735,7 @@ public class Principal extends javax.swing.JFrame {
     private void cambio_aplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cambio_aplicarActionPerformed
             matrizSeleccionada.duplicar();
             matrizSeleccionada.getUltimo().cambioFila(cambio1cb.getSelectedIndex(), cambio2cb.getSelectedIndex());
-            matrizSeleccionada.agregarOperacion((cambio1cb.getSelectedIndex()+1)+"Fn<-->"+(cambio2cb.getSelectedIndex()+1)+"Fm");
+            matrizSeleccionada.agregarOperacion("Fn"+(cambio1cb.getSelectedIndex()+1)+"+"+"<-->"+"Fm"+(cambio2cb.getSelectedIndex()+1));
             JOptionPane.showMessageDialog(null, "Operacion realizada");
             actualizar();
         
@@ -745,7 +747,6 @@ public class Principal extends javax.swing.JFrame {
         try {
             //System.out.println(pasoscb.getSelectedIndex());
             areatexto.setText("");
-            System.out.println();
             areatexto.setText(matrizSeleccionada.imprimirTXT());
             
         } catch (Exception e) {
