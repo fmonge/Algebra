@@ -49,21 +49,27 @@ public class Fraccion {
     	return mcdAux(denominador, nominador);
     } 
 
-    private int mcdAux(int denominador, int nominador){    	
-		int residuo = denominador % nominador;
-		if (residuo == 0 )
-			return nominador;
-		return(mcdAux(nominador, residuo));
+    private int mcdAux(int denominador, int nominador){ 
+        if(nominador != 0)          
+        {
+            int residuo = denominador % nominador;
+            if (residuo == 0 )
+                return nominador;
+            return(mcdAux(nominador, residuo));
+        }
+        return -1;
 }    
     public Fraccion simplificar(Fraccion fraccion){
     	int mcd = mcd(fraccion);
     	fraccion.setDenominador(fraccion.getDenominador()/mcd);
     	fraccion.setNominador(fraccion.getNominador()/mcd);
         if(fraccion.getDenominador()<0){
-            fraccion.setDenominador( - fraccion.getDenominador());
             fraccion.setNominador( - fraccion.getNominador());
+            fraccion.setDenominador( - fraccion.getDenominador());       
         }
-         
+        if(fraccion.getNominador() == 0)
+            fraccion.setDenominador(1);
+        
     	return fraccion;
     }
     
@@ -86,8 +92,6 @@ public class Fraccion {
     }
 	
 	private Fraccion sumaResta(int[][] terms, char simbol){
-        System.out.println("srA- " + terms[0][0] + "/" + terms[1][0]);
-        System.out.println("srB- " + terms[0][1] + "/" + terms[1][1]);
 	Fraccion result = new Fraccion(1,1);
     	if(terms[1][0] == terms[1][1])
     	{
@@ -109,9 +113,9 @@ public class Fraccion {
     public Fraccion operacion(Fraccion a, Fraccion b, char simbol){
     	// +, -, *, / e, suma, resta, multiplicación, divi, e escalar
     	int terms[][] = getTerms(a, b);
-        System.out.println("A- " + terms[0][0] + "/" + terms[1][0]);
-        System.out.println("B- " + terms[0][1] + "/" + terms[1][1]);
-        System.out.println("simbol"+simbol);
+        //System.out.println("A- " + terms[0][0] + "/" + terms[1][0]);
+        //System.out.println("B- " + terms[0][1] + "/" + terms[1][1]);
+        //System.out.println("simbol"+simbol);
     	if( simbol == '+' || simbol == '-')
     		return simplificar(sumaResta(terms, simbol));
 

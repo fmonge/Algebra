@@ -82,15 +82,15 @@ public class Matriz  {
     }
 
     //En este caso la suma de las filas es sin muplicacion al inicio Ejemplo [F1-->F2]
-    public void sumaFila(int filaN,int filaM){ 
+    public void sumaFila(int filaN,int filaM){
         for (int i = 0; i < matriz.get(filaN).size(); i++) {
             Fraccion f = new Fraccion(0, 0);
             f = f.operacion(matriz.get(filaN).get(i), matriz.get(filaM).get(i), '+');
             System.out.println(f.toString()+"asdkijhashjgfd");
-            matriz.get(filaM).set(i, f);   
+            matriz.get(filaM).set(i, f);
         }
-
     }
+    
     //En este caso  la  filaN lleva multiplicacion al inicio Ejemplo: 3F1-->F2
     public void sumaFila(Fraccion escalarN,int filaN ,String o,int filaM){
         for (int i = 0; i < matriz.get(filaN).size(); i++) {
