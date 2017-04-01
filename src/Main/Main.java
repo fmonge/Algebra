@@ -14,12 +14,12 @@ import GUI.Principal;
  */
 public class Main {
     public static void main(String[] args) {
-        // ejemplo de ops de fracciones
-        //Fraccion a = new Fraccion(1,2);
-        //raccion b = new Fraccion(3,4);
-        //Fraccion c = new Fraccion(1,1);
-        //c = c.operacion(a, b, '/');
-        //System.err.println("-->"+c.toString());
+         //ejemplo de ops de fracciones
+        Fraccion a = new Fraccion(1,2);
+        Fraccion b = new Fraccion(1,2);
+        Fraccion c = new Fraccion(1,1);
+        c = c.operacion(a, b, '/');
+        System.err.println("-->"+c.toString());
         Principal p = new Principal();
         p.setVisible(true);      
     }
