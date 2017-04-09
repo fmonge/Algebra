@@ -6,7 +6,7 @@ import java.util.ArrayList;
 /**
  *
  * @author Curso
- */d 
+ */
 public class Matriz  {
     private ArrayList<ArrayList<Fraccion>> matriz;
     
@@ -21,7 +21,6 @@ public class Matriz  {
     public void añadirFila(ArrayList<Fraccion> array){
         this.matriz.add(array);   
     }
-    
     public ArrayList<ArrayList<Fraccion>> getMatriz() {
         return matriz;
     }     
@@ -98,8 +97,27 @@ public class Matriz  {
             matriz.get(filaM).set(i, f);
             
         }
+    
+        
+        
+        
 
     }
+    public Matriz sumaMatriz(Matriz a,Matriz b){
+        Matriz Matriztmp = new Matriz();
+        Fraccion f = new Fraccion(1, 1);
+        for (int i = 0; i < a.getFila(i).size(); i++) {
+            ArrayList<Fraccion> filatmp = new ArrayList<>();
+            for (int j = 0; j < a.getFila(i).size(); j++) {
+                filatmp.add(f.operacion(a.getFila(i).get(j), b.getFila(i).get(j),'+' ));
+                
+            }
+            Matriztmp.añadirFila(filatmp);      
+        }
+        return Matriztmp;
+            
+        }
+        
     //En este caso  la  filaN lleva multiplicacion al inicio Ejemplo: 3F1-->F2
     public void sumaFila(Fraccion escalarN,int filaN ,String o,int filaM){
         for (int i = 0; i < matriz.get(filaN).size(); i++) {
@@ -164,9 +182,11 @@ public class Matriz  {
     public String imprimirMatriz(){
         String a = "";
         for (int i = 0; i < matriz.size(); i++) {
-            a=a+matriz.get(i).toString()+System.lineSeparator();            
+            a=a+matriz.get(i).toString()+System.lineSeparator();
+            
         }
-        return a;    
+        return a;
+    
     } 
     public int filasSize(){
        return  matriz.size();
@@ -178,8 +198,6 @@ public class Matriz  {
     public void setMatriz(ArrayList<ArrayList<Fraccion>> matriz) {
         this.matriz = matriz;
     }
-    
-
 
     
     

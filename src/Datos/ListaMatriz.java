@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -59,8 +60,24 @@ public class ListaMatriz {
         return matrices.size();
     }
     public void duplicar(){
-        Matriz m = new Matriz(new ArrayList<ArrayList<Fraccion>>(getUltimo().getMatriz()));
+        Matriz m = new Matriz();
+        try {
+            for (int i = 0; i < this.getUltimo().getFila(0).size(); i++) {
+                ArrayList<Fraccion> filatmp = new ArrayList<>();
+                for (int j = 0; j < this.getUltimo().getFila(0).size(); j++) {
+                    Fraccion f = new Fraccion(this.getUltimo().getFila(i).get(j).getNominador(),this.getUltimo().getFila(i).get(j).getDenominador());
+                    filatmp.add(f);
+
+            }
+            m.añadirFila(filatmp);      
+        }
         matrices.add(m);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e+"si aqui");
+        }
+        
+        
+        
         
     }
     public Matriz getUltimo(){
@@ -78,16 +95,9 @@ public class ListaMatriz {
         String s = "";
         for (int i = 0; i < matrices.size(); i++) {
             if (i != matrices.size()-1){
-                s=s+matrices.get(i).imprimirMatriz()+System.lineSeparator()+"Operacion:"+operaciones.get(i)
+                s=s+matrices.get(i).imprimirMatriz()
                     +System.lineSeparator()+"----------------------------------------------------------------------"+System.lineSeparator();
             }
-            else{
-                s=s+matrices.get(i).imprimirMatriz()+System.lineSeparator()
-                    +System.lineSeparator()+"----------------------------------------------------------------------"+System.lineSeparator();
-
-            }
-            
-            
         }
         return s;
     }

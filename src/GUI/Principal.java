@@ -655,9 +655,13 @@ public class Principal extends javax.swing.JFrame {
         try {
             switch(sumacb.getSelectedItem().toString()){
             case "Fn-->Fm":
+                System.out.println("empieza");
                 matrizSeleccionada.duplicar();
+                System.out.println("paso");
                 matrizSeleccionada.getUltimo().sumaFila(suma1cb.getSelectedIndex(),suma2cb.getSelectedIndex() );
+                System.out.println("paso1");
                 matrizSeleccionada.agregarOperacion("Suma:"+"Fn-->Fm");
+                System.out.println("paso2");
                 break;
             case "xFn-->Fm":
                 Fraccion f1 = new Fraccion(Integer.parseInt(txt_suma1.getText()),Integer.parseInt(txt_suma1_1.getText()));

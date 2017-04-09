@@ -143,12 +143,15 @@ public class Fraccion {
 	return simplificar(result);
     }
 
-    private void result(int i, int j) {
-            // TODO Auto-generated method stub
-    }
+	private void result(int i, int j) {
+		// TODO Auto-generated method stub
+		
+	}
 
     @Override
     public String toString() {
         return this.nominador+"/"+denominador;
-    }          
+    }
+        
+    
 }
