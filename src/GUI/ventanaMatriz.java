@@ -1170,6 +1170,7 @@ public class ventanaMatriz extends javax.swing.JFrame {
             principal.agregarAMatricesIngresadas(matrices);
             JOptionPane.showMessageDialog(null, "La matriz se agrego correctamente");
             principal.agregarCombo(nombre);
+            principal.OPS();
             this.dispose();
         }
         else {

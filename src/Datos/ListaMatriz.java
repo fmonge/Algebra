@@ -52,7 +52,7 @@ public class ListaMatriz {
     public Matriz getInversa() {
         return inversa;
     }
-
+    
     public void setInversa(Matriz inversa) {
         this.inversa = inversa;
     }
@@ -96,10 +96,10 @@ public class ListaMatriz {
     public String imprimirTXT(){
         String s = "";
         for (int i = 0; i < matrices.size(); i++) {
-            if (i != matrices.size()-1){
+            
                 s=s+matrices.get(i).imprimirMatriz()
                     +System.lineSeparator()+"----------------------------------------------------------------------"+System.lineSeparator();
-            }
+            
         }
         return s;
     }

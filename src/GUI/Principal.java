@@ -88,9 +88,6 @@ public class Principal extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         cambio_aplicar = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        inversa_aplicar = new javax.swing.JButton();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         escalarFcb = new javax.swing.JComboBox<>();
@@ -103,6 +100,21 @@ public class Principal extends javax.swing.JFrame {
         txt_resta1_1 = new javax.swing.JTextField();
         txt_resta2_2 = new javax.swing.JTextField();
         escalarF1 = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
+        op_suma = new javax.swing.JButton();
+        op_resta = new javax.swing.JButton();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        op_multiplicacion = new javax.swing.JButton();
+        cb_opsuma1 = new javax.swing.JComboBox<>();
+        cb_opsuma2 = new javax.swing.JComboBox<>();
+        cb_opresta1 = new javax.swing.JComboBox<>();
+        cb_opresta2 = new javax.swing.JComboBox<>();
+        cb_opmulti1 = new javax.swing.JComboBox<>();
+        cb_opmulti2 = new javax.swing.JComboBox<>();
+        prueba = new javax.swing.JButton();
+        pruebatxt = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         matrizNombre = new javax.swing.JLabel();
 
@@ -289,18 +301,6 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel7.setText("Calculo de la Inversa");
-
-        jLabel8.setText("-------------------------------------------------------------------------------------");
-
-        inversa_aplicar.setText("Aplicar");
-        inversa_aplicar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inversa_aplicarActionPerformed(evt);
-            }
-        });
-
         jLabel20.setText("<---->");
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -359,84 +359,66 @@ public class Principal extends javax.swing.JFrame {
         tab_opLayout.setHorizontalGroup(
             tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tab_opLayout.createSequentialGroup()
+                .addComponent(jLabel19)
+                .addGap(0, 494, Short.MAX_VALUE))
+            .addGroup(tab_opLayout.createSequentialGroup()
                 .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9)
-                    .addComponent(jLabel19)
                     .addGroup(tab_opLayout.createSequentialGroup()
+                        .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(tab_opLayout.createSequentialGroup()
+                                .addComponent(jLabel12)
+                                .addGap(67, 67, 67))
+                            .addGroup(tab_opLayout.createSequentialGroup()
+                                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txt_resta2_2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(tab_opLayout.createSequentialGroup()
+                                        .addComponent(txt_resta1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(resta1cb, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txt_resta2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                         .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel13)
+                            .addComponent(resta2cb, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(tab_opLayout.createSequentialGroup()
+                            .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel16)
+                                .addComponent(cambio1cb, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(17, 17, 17)
+                            .addComponent(jLabel20)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel17)
+                                .addComponent(cambio2cb, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(102, 102, 102))
+                        .addGroup(tab_opLayout.createSequentialGroup()
+                            .addComponent(jLabel18)
+                            .addGap(156, 156, 156)
+                            .addComponent(cambio_aplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_resta1_1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, tab_opLayout.createSequentialGroup()
-                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel14)
                                     .addGap(18, 18, 18)
-                                    .addComponent(sumacb, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(restacb, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(suma_aplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addGroup(tab_opLayout.createSequentialGroup()
-                                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(tab_opLayout.createSequentialGroup()
-                                        .addComponent(jLabel12)
-                                        .addGap(67, 67, 67))
-                                    .addGroup(tab_opLayout.createSequentialGroup()
-                                        .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(txt_resta2_2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(tab_opLayout.createSequentialGroup()
-                                                .addComponent(txt_resta1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(resta1cb, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(txt_resta2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel13)
-                                    .addComponent(resta2cb, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(tab_opLayout.createSequentialGroup()
-                                    .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel16)
-                                        .addComponent(cambio1cb, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(17, 17, 17)
-                                    .addComponent(jLabel20)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel17)
-                                        .addComponent(cambio2cb, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(102, 102, 102))
-                                .addGroup(tab_opLayout.createSequentialGroup()
-                                    .addComponent(jLabel18)
-                                    .addGap(156, 156, 156)
-                                    .addComponent(cambio_aplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txt_resta1_1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, tab_opLayout.createSequentialGroup()
-                                            .addComponent(jLabel14)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(restacb, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(resta_aplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.LEADING)))))
-                        .addGap(62, 62, 62)
-                        .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel24)
-                            .addGroup(tab_opLayout.createSequentialGroup()
-                                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel23)
-                                    .addComponent(escalarF, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(escalarF1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(4, 4, 4)
-                                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(escalarF_aplicar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab_opLayout.createSequentialGroup()
-                                        .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(escalarFcb, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel21))
-                                        .addGap(188, 188, 188))))
-                            .addGroup(tab_opLayout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(inversa_aplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel8)))
+                                    .addComponent(resta_aplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.LEADING)))))
+                .addGap(364, 486, Short.MAX_VALUE))
+            .addGroup(tab_opLayout.createSequentialGroup()
+                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, tab_opLayout.createSequentialGroup()
+                            .addComponent(jLabel5)
+                            .addGap(18, 18, 18)
+                            .addComponent(sumacb, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(suma_aplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING))
                     .addGroup(tab_opLayout.createSequentialGroup()
                         .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(tab_opLayout.createSequentialGroup()
@@ -456,60 +438,51 @@ public class Principal extends javax.swing.JFrame {
                         .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel11)
                             .addComponent(suma2cb, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 92, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel24)
+                    .addGroup(tab_opLayout.createSequentialGroup()
+                        .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel23)
+                            .addComponent(escalarF, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(escalarF1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(4, 4, 4)
+                        .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(escalarF_aplicar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab_opLayout.createSequentialGroup()
+                                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(escalarFcb, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel21))
+                                .addGap(188, 188, 188)))))
+                .addGap(144, 144, 144))
         );
         tab_opLayout.setVerticalGroup(
             tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tab_opLayout.createSequentialGroup()
                 .addComponent(jLabel9)
                 .addGap(20, 20, 20)
-                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(sumacb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(suma_aplicar)
-                    .addComponent(jLabel7)
-                    .addComponent(inversa_aplicar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel11))
-                .addGap(4, 4, 4)
-                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_suma2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_suma1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(suma2cb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(suma1cb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(4, 4, 4)
-                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_suma1_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_suma2_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel8))
-                .addGap(18, 18, 18)
                 .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(tab_opLayout.createSequentialGroup()
                         .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel14)
-                            .addComponent(restacb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(resta_aplicar))
+                            .addComponent(jLabel5)
+                            .addComponent(sumacb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(suma_aplicar))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel12)
-                            .addComponent(jLabel13))
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel11))
                         .addGap(4, 4, 4)
                         .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txt_resta2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_resta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(resta2cb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(resta1cb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(2, 2, 2)
+                            .addComponent(txt_suma2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_suma1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(suma2cb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(suma1cb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(4, 4, 4)
                         .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txt_resta1_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_resta2_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txt_suma1_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_suma2_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel15))
+                        .addComponent(jLabel6))
                     .addGroup(tab_opLayout.createSequentialGroup()
                         .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel23)
@@ -524,6 +497,27 @@ public class Principal extends javax.swing.JFrame {
                         .addComponent(escalarF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel24)))
+                .addGap(22, 22, 22)
+                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(restacb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(resta_aplicar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(jLabel13))
+                .addGap(4, 4, 4)
+                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_resta2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_resta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(resta2cb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(resta1cb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(2, 2, 2)
+                .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_resta1_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_resta2_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel15)
                 .addGap(18, 18, 18)
                 .addGroup(tab_opLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel18)
@@ -539,10 +533,117 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(jLabel20))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel19)
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
-        ventanaTab.addTab("Operaciones ", tab_op);
+        ventanaTab.addTab("Operaciones Elementales", tab_op);
+
+        op_suma.setText("Operar");
+        op_suma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                op_sumaActionPerformed(evt);
+            }
+        });
+
+        op_resta.setText("Operar");
+
+        jLabel22.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel22.setText("Suma de Matrices");
+
+        jLabel25.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel25.setText("Resta de Matrices");
+
+        jLabel26.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel26.setText("Multiplicacion");
+
+        op_multiplicacion.setText("Operar");
+        op_multiplicacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                op_multiplicacionActionPerformed(evt);
+            }
+        });
+
+        cb_opresta1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb_opresta1ActionPerformed(evt);
+            }
+        });
+
+        prueba.setText("prueba");
+        prueba.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pruebaActionPerformed(evt);
+            }
+        });
+
+        pruebatxt.setText("jLabel7");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(op_suma)
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabel22))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(op_resta)
+                            .addComponent(op_multiplicacion))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel26)
+                            .addComponent(jLabel25))))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(cb_opmulti1, 0, 82, Short.MAX_VALUE)
+                    .addComponent(cb_opsuma1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cb_opresta1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(cb_opsuma2, 0, 80, Short.MAX_VALUE)
+                    .addComponent(cb_opresta2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cb_opmulti2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(73, 73, 73)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(prueba)
+                    .addComponent(pruebatxt, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(44, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(op_suma)
+                    .addComponent(jLabel22)
+                    .addComponent(cb_opsuma1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cb_opsuma2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(prueba))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(op_resta)
+                            .addComponent(jLabel25)
+                            .addComponent(cb_opresta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cb_opresta2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(76, 76, 76)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(op_multiplicacion)
+                            .addComponent(jLabel26)
+                            .addComponent(cb_opmulti1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cb_opmulti2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(pruebatxt, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(155, Short.MAX_VALUE))
+        );
+
+        ventanaTab.addTab("Operaciones con matrices", jPanel1);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setText("Matriz Seleccionada :");
@@ -613,165 +714,25 @@ public class Principal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btn_crearActionPerformed
 
-    private void btn_imprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_imprimirActionPerformed
-        try {
-            //System.out.println(pasoscb.getSelectedIndex());
-            areatexto.setText("");          
-            areatexto.setText(matrizSeleccionada.getMatrices().get(pasoscb.getSelectedIndex()).imprimirMatriz());
-            matrizSeleccionada.imprimir();
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-        
-        
-        
-// TODO add your handling code here:
-    }//GEN-LAST:event_btn_imprimirActionPerformed
-
-    private void MATRICESMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MATRICESMouseClicked
-        
-        actualizar();
-        
+    private void escalarF1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_escalarF1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_MATRICESMouseClicked
+    }//GEN-LAST:event_escalarF1ActionPerformed
 
-    private void txt_suma2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_suma2ActionPerformed
+    private void txt_resta2_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_resta2_2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_suma2ActionPerformed
+    }//GEN-LAST:event_txt_resta2_2ActionPerformed
 
-    private void txt_suma1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_suma1ActionPerformed
+    private void txt_resta1_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_resta1_1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_suma1ActionPerformed
+    }//GEN-LAST:event_txt_resta1_1ActionPerformed
 
-    private void txt_resta2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_resta2ActionPerformed
+    private void txt_suma1_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_suma1_1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_resta2ActionPerformed
+    }//GEN-LAST:event_txt_suma1_1ActionPerformed
 
-    private void txt_resta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_resta1ActionPerformed
+    private void escalarFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_escalarFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_resta1ActionPerformed
-
-    private void suma_aplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_suma_aplicarActionPerformed
-        try {
-            switch(sumacb.getSelectedItem().toString()){
-            case "Fn-->Fm":
-                System.out.println("empieza");
-                matrizSeleccionada.duplicar();
-                System.out.println("paso");
-                matrizSeleccionada.getUltimo().sumaFila(suma1cb.getSelectedIndex(),suma2cb.getSelectedIndex() );
-                System.out.println("paso1");
-                matrizSeleccionada.agregarOperacion("Suma:"+"Fn-->Fm");
-                System.out.println("paso2");
-                break;
-            case "xFn-->Fm":
-                Fraccion f1 = new Fraccion(Integer.parseInt(txt_suma1.getText()),Integer.parseInt(txt_suma1_1.getText()));
-                matrizSeleccionada.duplicar();
-                matrizSeleccionada.getUltimo().sumaFila(f1, suma1cb.getSelectedIndex(), "null",suma2cb.getSelectedIndex());
-                
-                matrizSeleccionada.agregarOperacion("Suma:"+f1.getNominador()+"/"+f1.getDenominador()+"xFn-->Fm");
-                
-                break;
-            case "Fn-->xFm":
-                Fraccion f2 = new Fraccion(Integer.parseInt(txt_suma2.getText()),Integer.parseInt(txt_suma2_2.getText()));
-                matrizSeleccionada.duplicar();
-                matrizSeleccionada.getUltimo().sumaFila("null", suma1cb.getSelectedIndex(),f2,suma2cb.getSelectedIndex());
-                matrizSeleccionada.agregarOperacion("Suma:"+"Fn-->"+f2.getNominador()+"/"+f2.getDenominador()+"Fm");
-                break;
-            case "xFn-->xFm":
-                Fraccion f3 = new Fraccion(Integer.parseInt(txt_suma1.getText()),Integer.parseInt(txt_suma1_1.getText()));
-                Fraccion f4 = new Fraccion(Integer.parseInt(txt_suma2.getText()),Integer.parseInt(txt_suma2_2.getText()));
-                matrizSeleccionada.duplicar();
-                matrizSeleccionada.getUltimo().sumaFila(f3,suma1cb.getSelectedIndex(),f4, suma2cb.getSelectedIndex());
-                matrizSeleccionada.agregarOperacion("Suma:"+f3.getNominador()+"/"+f3.getDenominador()+"xFn-->"+f4.getNominador()+"/"+f4.getDenominador()+"xFm");
-                break;
-        }
-        JOptionPane.showMessageDialog(null, "Operacion realizada");
-        actualizar();
-            
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Favor ingrese los valores correctos: "+e);
-        }
-        
-        
-        // TODO add your handling code here:
-    }//GEN-LAST:event_suma_aplicarActionPerformed
-
-    private void resta_aplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resta_aplicarActionPerformed
-        try {
-            switch(restacb.getSelectedItem().toString()){
-            case "Fn-->Fm":
-                matrizSeleccionada.duplicar();
-                matrizSeleccionada.getUltimo().restaFila(resta1cb.getSelectedIndex(),resta2cb.getSelectedIndex() );
-                matrizSeleccionada.agregarOperacion("Resta:"+"Fn-->Fm");
-                break;
-            case "xFn-->Fm":
-                Fraccion f1 = new Fraccion(Integer.parseInt(txt_resta1.getText()),Integer.parseInt(txt_resta1_1.getText()));
-                matrizSeleccionada.duplicar();
-                matrizSeleccionada.getUltimo().restaFila(f1, resta1cb.getSelectedIndex(), "null",resta2cb.getSelectedIndex());
-                matrizSeleccionada.agregarOperacion("Resta:"+f1.getNominador()+"/"+f1.getDenominador()+"xFn-->Fm");
-                break;
-            case "Fn-->xFm":
-                Fraccion f2 = new Fraccion(Integer.parseInt(txt_resta2.getText()),Integer.parseInt(txt_resta2_2.getText()));
-                matrizSeleccionada.duplicar();
-                matrizSeleccionada.getUltimo().restaFila("null", resta1cb.getSelectedIndex(),f2,resta2cb.getSelectedIndex());
-                matrizSeleccionada.agregarOperacion("Resta:"+"Fn-->"+f2.getNominador()+"/"+f2.getDenominador()+"Fm");
-                break;
-            case "xFn-->xFm":
-                Fraccion f3 = new Fraccion(Integer.parseInt(txt_resta1.getText()),Integer.parseInt(txt_resta1_1.getText()));
-                Fraccion f4 = new Fraccion(Integer.parseInt(txt_resta2.getText()),Integer.parseInt(txt_resta2_2.getText()));
-                matrizSeleccionada.duplicar();
-                matrizSeleccionada.getUltimo().restaFila(f3,resta1cb.getSelectedIndex(),f4, resta2cb.getSelectedIndex());
-                matrizSeleccionada.agregarOperacion("Resta:"+f3.getNominador()+"/"+f3.getDenominador()+"xFn-->"+f4.getNominador()+"/"+f4.getDenominador()+"xFm");
-                break;
-        }
-            JOptionPane.showMessageDialog(null, "Agregado");
-            actualizar();
-        
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Favor ingrese los valores correctos "+e);
-        }
-        
-        
-        
-// TODO add your handling code here:
-    }//GEN-LAST:event_resta_aplicarActionPerformed
-
-    private void cambio_aplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cambio_aplicarActionPerformed
-            matrizSeleccionada.duplicar();
-            matrizSeleccionada.getUltimo().cambioFila(cambio1cb.getSelectedIndex(), cambio2cb.getSelectedIndex());
-            matrizSeleccionada.agregarOperacion("Fn"+(cambio1cb.getSelectedIndex()+1)+"+"+"<-->"+"Fm"+(cambio2cb.getSelectedIndex()+1));
-            JOptionPane.showMessageDialog(null, "Operacion realizada");
-            actualizar();
-        
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cambio_aplicarActionPerformed
-    public void nada(){}
-    private void btn_secuenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_secuenciaActionPerformed
-        try {
-            //System.out.println(pasoscb.getSelectedIndex());
-            areatexto.setText("");
-            areatexto.setText(matrizSeleccionada.imprimirTXT());
-            
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_secuenciaActionPerformed
-
-    private void inversa_aplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inversa_aplicarActionPerformed
-        if (esCuadrada()){
-            
-        }
-        else{
-            JOptionPane.showMessageDialog(null, "La Matriz seleccionada no es cuadrada intente seleccionar una matriz cuadrada");
-        
-        }
-        
-
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_inversa_aplicarActionPerformed
+    }//GEN-LAST:event_escalarFActionPerformed
 
     private void escalarF_aplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_escalarF_aplicarActionPerformed
         Fraccion f = new Fraccion(Integer.parseInt(escalarF.getText()), Integer.parseInt(escalarF1.getText()));
@@ -782,30 +743,214 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_escalarF_aplicarActionPerformed
 
-    private void escalarFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_escalarFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_escalarFActionPerformed
+    private void cambio_aplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cambio_aplicarActionPerformed
+        matrizSeleccionada.duplicar();
+        matrizSeleccionada.getUltimo().cambioFila(cambio1cb.getSelectedIndex(), cambio2cb.getSelectedIndex());
+        matrizSeleccionada.agregarOperacion("Fn"+(cambio1cb.getSelectedIndex()+1)+"+"+"<-->"+"Fm"+(cambio2cb.getSelectedIndex()+1));
+        JOptionPane.showMessageDialog(null, "Operacion realizada");
+        actualizar();
 
-    private void txt_suma1_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_suma1_1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_suma1_1ActionPerformed
+    }//GEN-LAST:event_cambio_aplicarActionPerformed
 
-    private void txt_resta1_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_resta1_1ActionPerformed
+    private void txt_resta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_resta1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_resta1_1ActionPerformed
+    }//GEN-LAST:event_txt_resta1ActionPerformed
 
-    private void txt_resta2_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_resta2_2ActionPerformed
+    private void txt_resta2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_resta2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_resta2_2ActionPerformed
+    }//GEN-LAST:event_txt_resta2ActionPerformed
 
-    private void escalarF1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_escalarF1ActionPerformed
+    private void resta_aplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resta_aplicarActionPerformed
+        try {
+            switch(restacb.getSelectedItem().toString()){
+                case "Fn-->Fm":
+                matrizSeleccionada.duplicar();
+                matrizSeleccionada.getUltimo().restaFila(resta1cb.getSelectedIndex(),resta2cb.getSelectedIndex() );
+                matrizSeleccionada.agregarOperacion("Resta:"+"Fn-->Fm");
+                break;
+                case "xFn-->Fm":
+                Fraccion f1 = new Fraccion(Integer.parseInt(txt_resta1.getText()),Integer.parseInt(txt_resta1_1.getText()));
+                matrizSeleccionada.duplicar();
+                matrizSeleccionada.getUltimo().restaFila(f1, resta1cb.getSelectedIndex(), "null",resta2cb.getSelectedIndex());
+                matrizSeleccionada.agregarOperacion("Resta:"+f1.getNominador()+"/"+f1.getDenominador()+"xFn-->Fm");
+                break;
+                case "Fn-->xFm":
+                Fraccion f2 = new Fraccion(Integer.parseInt(txt_resta2.getText()),Integer.parseInt(txt_resta2_2.getText()));
+                matrizSeleccionada.duplicar();
+                matrizSeleccionada.getUltimo().restaFila("null", resta1cb.getSelectedIndex(),f2,resta2cb.getSelectedIndex());
+                matrizSeleccionada.agregarOperacion("Resta:"+"Fn-->"+f2.getNominador()+"/"+f2.getDenominador()+"Fm");
+                break;
+                case "xFn-->xFm":
+                Fraccion f3 = new Fraccion(Integer.parseInt(txt_resta1.getText()),Integer.parseInt(txt_resta1_1.getText()));
+                Fraccion f4 = new Fraccion(Integer.parseInt(txt_resta2.getText()),Integer.parseInt(txt_resta2_2.getText()));
+                matrizSeleccionada.duplicar();
+                matrizSeleccionada.getUltimo().restaFila(f3,resta1cb.getSelectedIndex(),f4, resta2cb.getSelectedIndex());
+                matrizSeleccionada.agregarOperacion("Resta:"+f3.getNominador()+"/"+f3.getDenominador()+"xFn-->"+f4.getNominador()+"/"+f4.getDenominador()+"xFm");
+                break;
+            }
+            JOptionPane.showMessageDialog(null, "Agregado");
+            actualizar();
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Favor ingrese los valores correctos "+e);
+        }
+
         // TODO add your handling code here:
-    }//GEN-LAST:event_escalarF1ActionPerformed
-    public boolean esCuadrada(){
+    }//GEN-LAST:event_resta_aplicarActionPerformed
+
+    private void txt_suma1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_suma1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_suma1ActionPerformed
+
+    private void txt_suma2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_suma2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_suma2ActionPerformed
+
+    private void suma_aplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_suma_aplicarActionPerformed
+        try {
+            switch(sumacb.getSelectedItem().toString()){
+                case "Fn-->Fm":
+                System.out.println("empieza");
+                matrizSeleccionada.duplicar();
+                System.out.println("paso");
+                matrizSeleccionada.getUltimo().sumaFila(suma1cb.getSelectedIndex(),suma2cb.getSelectedIndex() );
+                System.out.println("paso1");
+                matrizSeleccionada.agregarOperacion("Suma:"+"Fn-->Fm");
+                System.out.println("paso2");
+                break;
+                case "xFn-->Fm":
+                Fraccion f1 = new Fraccion(Integer.parseInt(txt_suma1.getText()),Integer.parseInt(txt_suma1_1.getText()));
+                matrizSeleccionada.duplicar();
+                matrizSeleccionada.getUltimo().sumaFila(f1, suma1cb.getSelectedIndex(), "null",suma2cb.getSelectedIndex());
+
+                matrizSeleccionada.agregarOperacion("Suma:"+f1.getNominador()+"/"+f1.getDenominador()+"xFn-->Fm");
+
+                break;
+                case "Fn-->xFm":
+                Fraccion f2 = new Fraccion(Integer.parseInt(txt_suma2.getText()),Integer.parseInt(txt_suma2_2.getText()));
+                matrizSeleccionada.duplicar();
+                matrizSeleccionada.getUltimo().sumaFila("null", suma1cb.getSelectedIndex(),f2,suma2cb.getSelectedIndex());
+                matrizSeleccionada.agregarOperacion("Suma:"+"Fn-->"+f2.getNominador()+"/"+f2.getDenominador()+"Fm");
+                break;
+                case "xFn-->xFm":
+                Fraccion f3 = new Fraccion(Integer.parseInt(txt_suma1.getText()),Integer.parseInt(txt_suma1_1.getText()));
+                Fraccion f4 = new Fraccion(Integer.parseInt(txt_suma2.getText()),Integer.parseInt(txt_suma2_2.getText()));
+                matrizSeleccionada.duplicar();
+                matrizSeleccionada.getUltimo().sumaFila(f3,suma1cb.getSelectedIndex(),f4, suma2cb.getSelectedIndex());
+                matrizSeleccionada.agregarOperacion("Suma:"+f3.getNominador()+"/"+f3.getDenominador()+"xFn-->"+f4.getNominador()+"/"+f4.getDenominador()+"xFm");
+                break;
+            }
+            JOptionPane.showMessageDialog(null, "Operacion realizada");
+            actualizar();
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Favor ingrese los valores correctos: "+e);
+        }
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_suma_aplicarActionPerformed
+    public void OPS(){
+            cb_opsuma1.removeAllItems();
+            cb_opsuma2.removeAllItems();
+            cb_opresta1.removeAllItems();
+            cb_opresta2.removeAllItems();
+            cb_opmulti1.removeAllItems();
+            cb_opmulti2.removeAllItems();
+        for (int i = 0; i < matricesIngresadas.size(); i++) {
+            
+            cb_opsuma1.addItem(matricesIngresadas.get(i).getNombre());
+            cb_opsuma2.addItem(matricesIngresadas.get(i).getNombre());
+            cb_opresta1.addItem(matricesIngresadas.get(i).getNombre());
+            cb_opresta2.addItem(matricesIngresadas.get(i).getNombre());
+            cb_opmulti1.addItem(matricesIngresadas.get(i).getNombre());
+            cb_opmulti2.addItem(matricesIngresadas.get(i).getNombre());
+            
+            
+        }
+        
+    }
+    private void btn_secuenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_secuenciaActionPerformed
+        try {
+            //System.out.println(pasoscb.getSelectedIndex());
+            areatexto.setText("");
+            areatexto.setText(matrizSeleccionada.imprimirTXT());
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_secuenciaActionPerformed
+
+    private void btn_imprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_imprimirActionPerformed
+        try {
+            //System.out.println(pasoscb.getSelectedIndex());
+            areatexto.setText("");
+            areatexto.setText(matrizSeleccionada.getMatrices().get(pasoscb.getSelectedIndex()).imprimirMatriz());
+            matrizSeleccionada.imprimir();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_imprimirActionPerformed
+
+    private void MATRICESMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MATRICESMouseClicked
+
+        actualizar();
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MATRICESMouseClicked
+
+    private void cb_opresta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_opresta1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cb_opresta1ActionPerformed
+
+    private void op_sumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_op_sumaActionPerformed
+
+        ListaMatriz tmp = new ListaMatriz();
+        Matriz m = new Matriz();
+        //m = m.producto(obtenerMatrizPorNombre(cb_opsuma1.getSelectedItem().toString()),obtenerMatrizPorNombre(cb_opsuma2.getSelectedItem().toString()));
+        tmp.agregarMatriz(m);
+        String nombre  =   JOptionPane.showInputDialog(null,"Ingrese el nombre para la matriz de resultado");
+        tmp.setNombre(nombre);
+        matricesIngresadas.add(tmp);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_op_sumaActionPerformed
+
+    private void op_multiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_op_multiplicacionActionPerformed
+       ListaMatriz tmp = new ListaMatriz();
+        Matriz m = new Matriz();
+        m = m.producto(obtenerMatrizPorNombre(cb_opsuma1.getSelectedItem().toString()),obtenerMatrizPorNombre(cb_opsuma2.getSelectedItem().toString()));
+        tmp.agregarMatriz(m);
+        String nombre  =   JOptionPane.showInputDialog(null,"Ingrese el nombre para la matriz de resultado");
+        tmp.setNombre(nombre);
+        matricesIngresadas.add(tmp);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_op_multiplicacionActionPerformed
+
+    private void pruebaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pruebaActionPerformed
+       Fraccion f = new Fraccion(1, 1);
+       matricesIngresadas.get(0).getUltimo().setElement(f, 0, 0);
+        pruebatxt.setText(matricesIngresadas.get(0).getUltimo().getElement(0, 0).toString());
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pruebaActionPerformed
+    public void nada(){}    public boolean esCuadrada(){
         if (filaseleccionadas == columnaSeleccionadas){
             return true;
         }
         return false;
+    }
+    public Matriz obtenerMatrizPorNombre(String nombre){
+        for (int i = 0; i < matricesIngresadas.size(); i++) {
+            if(matricesIngresadas.get(i).getNombre()==nombre){
+                return matricesIngresadas.get(i).getUltimo();
+            }
+            
+        }
+        return null;
     }
     public void actualizar(){
         try {
@@ -885,11 +1030,16 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cambio1cb;
     private javax.swing.JComboBox<String> cambio2cb;
     private javax.swing.JButton cambio_aplicar;
+    private javax.swing.JComboBox<String> cb_opmulti1;
+    private javax.swing.JComboBox<String> cb_opmulti2;
+    private javax.swing.JComboBox<String> cb_opresta1;
+    private javax.swing.JComboBox<String> cb_opresta2;
+    private javax.swing.JComboBox<String> cb_opsuma1;
+    private javax.swing.JComboBox<String> cb_opsuma2;
     private javax.swing.JTextField escalarF;
     private javax.swing.JTextField escalarF1;
     private javax.swing.JButton escalarF_aplicar;
     private javax.swing.JComboBox<String> escalarFcb;
-    private javax.swing.JButton inversa_aplicar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -904,17 +1054,24 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel matrizNombre;
+    private javax.swing.JButton op_multiplicacion;
+    private javax.swing.JButton op_resta;
+    private javax.swing.JButton op_suma;
     private javax.swing.JComboBox<String> pasoscb;
+    private javax.swing.JButton prueba;
+    private javax.swing.JLabel pruebatxt;
     private javax.swing.JComboBox<String> resta1cb;
     private javax.swing.JComboBox<String> resta2cb;
     private javax.swing.JButton resta_aplicar;

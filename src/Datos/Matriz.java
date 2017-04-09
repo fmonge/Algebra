@@ -73,6 +73,20 @@ public class Matriz  {
         }
     
     }
+    public Matriz producto(Matriz a, Matriz b){
+        Matriz temp = new Matriz();
+        int size = a.getFila(0).size();
+        for (int x=0; x < size; x++)
+            for (int y=0; y < size; y++)
+                for (int z=0; z<size; z++)
+                {  
+                    Fraccion f  = new Fraccion(1, 1);
+                    f = f.operacion(a.getElement(x, z), b.getElement(z, y), '*');
+                    f = f.operacion(temp.getElement(x, y), f, '+');
+                    temp.setElement(f, x, y);
+               }
+        return temp;
+    }
     
     public void aplicarTranspuesta(){
         
