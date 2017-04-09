@@ -59,7 +59,9 @@ public class ListaMatriz {
     public int  size(){
         return matrices.size();
     }
+    
     public void duplicar(){
+        
         Matriz m = new Matriz();
         try {
             for (int i = 0; i < this.getUltimo().getFila(0).size(); i++) {

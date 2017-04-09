@@ -8,8 +8,9 @@ import java.util.ArrayList;
  * @author Curso
  */
 public class Matriz  {
-    private ArrayList<ArrayList<Fraccion>> matriz;
     
+    private ArrayList<ArrayList<Fraccion>> matriz;
+   
     public Matriz() {
         matriz = new ArrayList<ArrayList<Fraccion>>();        
     }
@@ -32,7 +33,14 @@ public class Matriz  {
         return new Fraccion(d, n);
     }
     public ArrayList<Fraccion> getFila(int i){
+        
         return matriz.get(i);
+    }
+    public Fraccion getElement(int i , int j){
+        return matriz.get(i).get(j);
+    }
+    public void setElement(Fraccion f ,int i ,int j){
+        matriz.get(i).set(j, f);
     }
     public ArrayList<Fraccion> getcolumna(int j){
         ArrayList<Fraccion> columna= new ArrayList<Fraccion>();
@@ -65,6 +73,7 @@ public class Matriz  {
         }
     
     }
+    
     public void aplicarTranspuesta(){
         
         ArrayList<ArrayList<Fraccion>> matriztmp = new ArrayList<>(); 
