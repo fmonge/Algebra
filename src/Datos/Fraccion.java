@@ -3,6 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Datos;
 
 import java.util.ArrayList;
@@ -15,7 +20,7 @@ public class Fraccion {
     private int denominador;
     private int nominador;
 
-    public Fraccion(int denominador, int nominador) {
+    public Fraccion(int nominador , int denominador) {
         this.denominador = denominador;
         this.nominador = nominador;
     }
@@ -44,26 +49,37 @@ public class Fraccion {
     	return mcdAux(denominador, nominador);
     } 
 
-    private int mcdAux(int denominador, int nominador){    	
-		int residuo = denominador % nominador;
-		if (residuo == 0 )
-			return nominador;
-		return(mcdAux(nominador, residuo));
+    private int mcdAux(int denominador, int nominador){ 
+        if(nominador != 0)          
+        {
+            int residuo = denominador % nominador;
+            if (residuo == 0 )
+                return nominador;
+            return(mcdAux(nominador, residuo));
+        }
+        return -1;
 }    
     public Fraccion simplificar(Fraccion fraccion){
     	int mcd = mcd(fraccion);
     	fraccion.setDenominador(fraccion.getDenominador()/mcd);
     	fraccion.setNominador(fraccion.getNominador()/mcd);
+        if(fraccion.getDenominador()<0){
+            fraccion.setNominador( - fraccion.getNominador());
+            fraccion.setDenominador( - fraccion.getDenominador());       
+        }
+        if(fraccion.getNominador() == 0)
+            fraccion.setDenominador(1);
+        
     	return fraccion;
     }
     
     
 	private int[][] getTerms(Fraccion a, Fraccion b){
-		int terms[][] = new int[2][2];
+	int terms[][] = new int[2][2];
     	terms[0][0] = a.getNominador();
     	terms[1][0] = a.getDenominador();
     	
-    	terms[0][0] = b.getNominador();
+    	terms[0][1] = b.getNominador();
     	terms[1][1] = b.getDenominador();
     	return terms;
     }
@@ -76,30 +92,33 @@ public class Fraccion {
     }
 	
 	private Fraccion sumaResta(int[][] terms, char simbol){
-		Fraccion result = new Fraccion(1,1);
-    	if(terms[0][1] == terms[1][1])
+	Fraccion result = new Fraccion(1,1);
+    	if(terms[1][0] == terms[1][1])
     	{
     		if(simbol == '+')
     			result.setNominador(terms[0][0]+terms[0][1]);
     		if(simbol == '-')
     			result.setNominador(terms[0][0]-terms[0][1]);
-    		result.setDenominador(terms[0][1]);
+    		result.setDenominador(terms[1][0]);
     		return simplificar(result);    		
     	}
     	if(simbol == '+')
     		result.setNominador(terms[0][0]*terms[1][1]+terms[0][1]*terms[1][0]);
     	if(simbol == '-')
     		result.setNominador(terms[0][0]*terms[1][1]-terms[0][1]*terms[1][0]);
-		result.setDenominador(terms[1][0]*terms[1][1]);	
-		return result;			
+	result.setDenominador(terms[1][0]*terms[1][1]);	
+	return result;			
 	}
 	
     public Fraccion operacion(Fraccion a, Fraccion b, char simbol){
     	// +, -, *, / e, suma, resta, multiplicación, divi, e escalar
     	int terms[][] = getTerms(a, b);
+        //System.out.println("A- " + terms[0][0] + "/" + terms[1][0]);
+        //System.out.println("B- " + terms[0][1] + "/" + terms[1][1]);
+        //System.out.println("simbol"+simbol);
     	if( simbol == '+' || simbol == '-')
     		return simplificar(sumaResta(terms, simbol));
- 
+
     	Fraccion result = new Fraccion(1,1);    
     	if(simbol == '*')
     	{
@@ -108,7 +127,7 @@ public class Fraccion {
     	}
     	else if(simbol == '/'){ // /
     		result.setNominador(terms[0][0]*terms[1][1]);
-    		result.setDenominador(terms[1][0]*terms[1][1]);
+    		result.setDenominador(terms[1][0]*terms[0][1]);
     	}
     	else
     		System.out.println("Msg temp, validad las entradas ;)");
@@ -119,14 +138,17 @@ public class Fraccion {
     public Fraccion operacion(Fraccion a, int escalar){
     	int terms[][] = getTerms(a);
     	Fraccion result = new Fraccion(1,1);
-    	result.setNominador(terms[0][0]*escalar);
-		result.setDenominador(terms[1][0]);
-		return simplificar(result);
+    	result.setNominador(a.getNominador() * escalar);
+	result.setDenominador(a.getDenominador());
+	return simplificar(result);
     }
 
-	private void result(int i, int j) {
-		// TODO Auto-generated method stub
-		
-	}
-    
+    private void result(int i, int j) {
+            // TODO Auto-generated method stub
+    }
+
+    @Override
+    public String toString() {
+        return this.nominador+"/"+denominador;
+    }          
 }
