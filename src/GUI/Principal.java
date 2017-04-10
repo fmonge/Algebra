@@ -980,7 +980,13 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_op_restaActionPerformed
 
     private void calc_inversaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calc_inversaActionPerformed
-        
+        Matriz m =  new Matriz();
+        for (int i = 0; i < matricesIngresadas.size(); i++) {
+            if (matricesIngresadas.get(i).getNombre()==cb_inversa.getSelectedItem().toString()){
+                matricesIngresadas.get(i).setInversa(m.Inversa(obtenerMatrizPorNombre(cb_inversa.getSelectedItem().toString())));
+            }
+            
+        }
 
         // TODO add your handling code here:
     }//GEN-LAST:event_calc_inversaActionPerformed
@@ -999,7 +1005,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_imprimirInversaActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        determinante.setText(obtenerMatrizPorNombre(MATRICES.getSelectedItem().toString()).determinante()+"");
+        
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed

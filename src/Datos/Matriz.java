@@ -64,10 +64,11 @@ public class Matriz  {
         matriz.set(filaM, tmp2);
     }
     //multiplica el numero de entrada por cada elemento de la matriz
-    public void multiplicacionEscalar(int  escalar){   
+    public void multiplicacionEscalar(Fraccion escalar){
+        Fraccion f = new Fraccion(1, 1);
         for (int i = 0; i < matriz.size(); i++) {
             for (int j = 0; j < matriz.get(i).size(); j++) {
-                matriz.get(i).get(j).setNominador(matriz.get(i).get(j).getNominador()*escalar);
+                matriz.get(i).set(j, f.operacion(escalar, matriz.get(i).get(j),'*')) ;
             }
             
         }
@@ -102,15 +103,60 @@ public class Matriz  {
                }
         return temp;
     }
-    
-    public void aplicarTranspuesta(){
-        
+    public Matriz Adjunta(Matriz m){
+        return Transpuesta(Cofactores(m));
+    }
+    public Matriz Inversa(Matriz m){
+        Fraccion det = new Fraccion(1, 1);
+        Matriz n = m.Adjunta(m);
+        det.operacion(new Fraccion(1, 1), m.determinante(m), '/');
+        m.multiplicacionEscalar(det);
+        return n;
+    }
+    public Matriz Cofactores(Matriz a){     
+    Matriz nn = new Matriz();
+        int size = a.getFila(0).size();
+        nn.iniciarMatriz(size);
+
+        for(int i=0;i<size;i++) {        
+            for(int j=0;j<size;j++) {           
+                Matriz det = new Matriz();
+                det.iniciarMatriz(size-1);
+
+
+                Fraccion detValor;
+
+                for(int k=0;k<size;k++) {
+                    if(k!=i) {
+                        for(int l=0;l<a.getFila(0).size();l++) {
+                            if(l!=j) {
+                            int indice1=k<i ? k : k-1 ;
+                            int indice2=l<j ? l : l-1 ;
+                            Fraccion f = a.getElement(k,l);
+                            det.setElement(f, indice1, indice2);
+                            }
+                        }
+                    }
+                }
+                detValor=det.determinante(det);
+                Fraccion f = new Fraccion(1,1);
+                f= detValor.operacion(detValor, new Fraccion((int)Math.pow(-1, i+j+2), 1), '*');
+                nn.setElement(f, i, i)  ;          
+            }
+        }
+        return nn;
+}
+    public Matriz Transpuesta(Matriz m){
+        Matriz transpuesta = new Matriz();
+        transpuesta.iniciarMatriz(m.getFila(0).size());
         ArrayList<ArrayList<Fraccion>> matriztmp = new ArrayList<>(); 
-        for (int i = 0; i < matriz.size(); i++) {
-            matriztmp.add(this.getcolumna(i));
+        for (int i = 0; i < m.getFila(0).size(); i++) {
+            for (int j = 0; j < m.getFila(0).size(); j++) {            
+                transpuesta.setElement(m.getFila(j).get(i), i, j);
+            }
             
         }
-        matriz = matriztmp;
+        return transpuesta;
     
     }
     //Operacion para multiplicar un numero por una fila de la matriz 
@@ -155,37 +201,39 @@ public class Matriz  {
         return Matriztmp;
             
         }
-    public Fraccion determinante(){
+    public Fraccion determinante(Matriz m){
         Fraccion f = new Fraccion(1, 1);
-        if (this.matriz.get(0).size()==2){
-            f = f.operacion(f.operacion(matriz.get(0).get(0),matriz.get(1).get(1),'*') ,f.operacion(matriz.get(1).get(0),matriz.get(0).get(1),'*'),'-');
+        if (m.getFila(0).size()==2){
+            f = f.operacion(f.operacion(m.getFila(0).get(0),m.getFila(1).get(1),'*') ,f.operacion(m.getFila(1).get(0),m.getFila(0).get(1),'*'),'-');
             return f;
         }
         Fraccion suma = new Fraccion(0,1);
-        for (int i = 0; i < matriz.get(0).size(); i++) {
+        for (int i = 0; i < m.getFila(0).size(); i++) {
             Matriz m1 = new Matriz();
-            m1.iniciarMatriz(matriz.get(0).size()-1);
-            for (int j = 0; j < matriz.get(0).size(); j++) {
+            m1.iniciarMatriz(m.getFila(0).size()-1);
+            for (int j = 0; j < m.getFila(0).size(); j++) {
                 if(j != i){
-                    for (int k = 1; k < matriz.get(0).size(); k++) {
+                    for (int k = 1; k < m.getFila(0).size(); k++) {
                          int indice = -1;
                          if(j < i)
                          indice = j;
                          else if(j > i)
                          indice = j-1;
-                         m1.getFila(i).set(k-1, matriz.get(j).get(k));
+                         m1.getFila(i).set(k-1, m.getFila(j).get(k));
                          
                     }
             }
             
         }
-        if(i%2==0)
-          suma.operacion(matriz.get(i).get(0),m1.determinante(), '*');
-          else
-          suma.operacion(matriz.get(i).get(0),m1.determinante(), '*');
-         
+        Fraccion f2 = new Fraccion(1, 1);
+        if(i%2==0){
+          suma.operacion(suma,f2.operacion(m.getElement(i, 0),m1.determinante(m), '*'),'+');
+                  }
+        else{
+          suma.operacion(suma,f2.operacion(m.getElement(i, 0),m1.determinante(m), '*'),'-');
         }
-        return f;
+        }
+        return suma;
     }
      public Matriz restaMatriz(Matriz a,Matriz b){
         Matriz Matriztmp = new Matriz();
