@@ -103,6 +103,9 @@ public class ListaMatriz {
         }
         return s;
     }
+    public String imprimirInversa(){
+        return inversa.toString();
     
+    }
     
 }
